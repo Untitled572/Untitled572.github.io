@@ -68,7 +68,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js" defer></script>
 
 
@@ -150,7 +150,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -236,36 +236,42 @@
     
     <div class="post-body" itemprop="articleBody"><p>众所周知, Debian向来以对新手不友好而著称, 笔者本人作为小白, 试过了几个不同的发行版后, 仍然选择了Debian作为主力系统, 下面介绍几个个人总结的常用（必用）命令</p>
 <span id="more"></span>
-<h2 id="Sudo权限"><a href="#Sudo权限" class="headerlink" title="Sudo权限"></a>Sudo权限</h2><p>安装过程中, 如果设置了管理员密码, 则后续设置的用户默认是没有sudo权限的, 可以通过以下命令来赋予权限</p>
+<h2 id="Sudo权限">Sudo权限</h2>
+<p>安装过程中, 如果设置了管理员密码, 则后续设置的用户默认是没有sudo权限的, 可以通过以下命令来赋予权限</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su -                                 <span class="comment">#切换到管理账户</span></span><br><span class="line">$ <span class="built_in">sudo</span> adduser USERNAME Sudo           <span class="comment">#将USERNAME用户加入到sudo组</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="apt安装常用软件"><a href="#apt安装常用软件" class="headerlink" title="apt安装常用软件"></a>apt安装常用软件</h2><p>有了sudo权限, 就可以安一些必要的软件了</p>
+<h2 id="apt安装常用软件">apt安装常用软件</h2>
+<p>有了sudo权限, 就可以安一些必要的软件了</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt update                     </span><br><span class="line">$ <span class="built_in">sudo</span> apt install curl git -y       </span><br><span class="line">$ <span class="built_in">sudo</span> apt install htop hyfetch -y     </span><br><span class="line">$ <span class="built_in">sudo</span> apt install tweaks     <span class="comment">#gnome桌面的自定义软件, 非gnome可以忽略</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="中文界面"><a href="#中文界面" class="headerlink" title="中文界面"></a>中文界面</h2><p>安装时候最好用英文安装, 中文的话文件夹是中文名, 安装后再更改语言设置</p>
+<h2 id="中文界面">中文界面</h2>
+<p>安装时候最好用英文安装, 中文的话文件夹是中文名, 安装后再更改语言设置</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install locales        </span><br><span class="line">$ <span class="built_in">sudo</span> dpkg-reconfigure locales   </span><br></pre></td></tr></table></figure>
 <p>随后翻到最下面找到<code>zh_CN.UTF-8 UTF-8</code>, 使用<kbd>空格</kbd>键选中后, 按<kbd>回车</kbd>键下一步, 选中<code>zh_CN.UTF-8</code>作为默认区域设置</p>
-<h2 id="中文输入法"><a href="#中文输入法" class="headerlink" title="中文输入法"></a>中文输入法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install fcitx5 fcitx5-chinese-addons</span><br></pre></td></tr></table></figure>
+<h2 id="中文输入法">中文输入法</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt install fcitx5 fcitx5-chinese-addons</span><br></pre></td></tr></table></figure>
 <p>重启后找到<code>fctix配置</code>, 点开后等gnome发送一条通知安装</p>
-<h2 id="Gnome扩展"><a href="#Gnome扩展" class="headerlink" title="Gnome扩展"></a>Gnome扩展</h2><p>默认状态下的gnome桌面比较难用, 可以在<a target="_blank" rel="noopener" href="https://extensions.gnome.org/">GNOME扩展</a>里找一些扩展安装上, 推荐几个常用的</p>
+<h2 id="Gnome扩展">Gnome扩展</h2>
+<p>默认状态下的gnome桌面比较难用, 可以在<a target="_blank" rel="noopener" href="https://extensions.gnome.org/">GNOME扩展</a>里找一些扩展安装上, 推荐几个常用的</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/307/dash-to-dock/">Dash to Dock</a>, 在桌面底部显示</li>
 </ul>
-<h2 id="挂载硬盘"><a href="#挂载硬盘" class="headerlink" title="挂载硬盘"></a>挂载硬盘</h2><p>首先使用<code>df -h</code>查看当前已经挂载的分区, 随后使用<code>lsblk</code>查看所有硬盘及分区</p>
+<h2 id="挂载硬盘">挂载硬盘</h2>
+<p>首先使用<code>df -h</code>查看当前已经挂载的分区, 随后使用<code>lsblk</code>查看所有硬盘及分区</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">df</span> -h</span><br><span class="line">文件系统        大小  已用  可用 已用% 挂载点</span><br><span class="line">udev            1.8G     0  1.8G    0% /dev</span><br><span class="line">tmpfs           375M  1.8M  373M    1% /run</span><br><span class="line">/dev/mmcblk0p2  110G  104G     0  100% /</span><br><span class="line">...</span><br><span class="line">/dev/mmcblk0p1  975M  8.8M  966M    1% /boot/efi</span><br><span class="line">/dev/mmcblk1p1   58G   45G   12G   80% /mnt/sdcard</span><br><span class="line">$ lsblk</span><br><span class="line">NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS</span><br><span class="line">mmcblk0      179:0    0 116.5G  0 disk</span><br><span class="line">├─mmcblk0p1  179:1    0   976M  0 part /boot/efi</span><br><span class="line">├─mmcblk0p2  179:2    0 111.7G  0 part /</span><br><span class="line">└─mmcblk0p3  179:3    0   3.8G  0 part [SWAP]</span><br><span class="line">mmcblk0boot0 179:256  0     4M  1 disk</span><br><span class="line">mmcblk0boot1 179:512  0     4M  1 disk</span><br><span class="line">mmcblk1      179:768  0  58.2G  0 disk</span><br><span class="line">└─mmcblk1p1  179:769  0  58.2G  0 part /mnt/sdcard</span><br></pre></td></tr></table></figure>
-<p>对于单次使用的挂载, 使用<code>mount</code>命令<br>对于需要长期使用的硬盘, 需要读取uuid后编辑fstab文件进行挂载</p>
-<h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><p>Docker官方提供了一个很方便的一键安装脚本</p>
+<p>对于单次使用的挂载, 使用<code>mount</code>命令<br>
+对于需要长期使用的硬盘, 需要读取uuid后编辑fstab文件进行挂载</p>
+<h2 id="Docker安装">Docker安装</h2>
+<p>Docker官方提供了一个很方便的一键安装脚本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl -fsSL https://get.docker.com -o get-docker.sh </span><br><span class="line">$ <span class="built_in">sudo</span> sh get-docker.sh</span><br></pre></td></tr></table></figure>
-
-<h2 id="切换GUI-CLI"><a href="#切换GUI-CLI" class="headerlink" title="切换GUI&#x2F;CLI"></a>切换GUI&#x2F;CLI</h2><p>如果不需要显示图形化界面, 配置完成后可以切换到命令行界面来释放图形界面占用的资源</p>
+<h2 id="切换GUI-CLI">切换GUI/CLI</h2>
+<p>如果不需要显示图形化界面, 配置完成后可以切换到命令行界面来释放图形界面占用的资源</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> systemctl get-default         <span class="comment">#查看当前状态</span></span><br><span class="line">$ <span class="built_in">sudo</span> systemctl isolate multiuser.target   <span class="comment">#临时切换到命令行界面</span></span><br><span class="line">$ <span class="built_in">sudo</span> systemctl isolate graphical.target   <span class="comment">#临时切换到图形界面</span></span><br><span class="line">$ <span class="built_in">sudo</span> systemctl set-default multiuser.target  <span class="comment">#设置默认为命令行界面</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="更改系统启动顺序"><a href="#更改系统启动顺序" class="headerlink" title="更改系统启动顺序"></a>更改系统启动顺序</h2><p>Windows 11的引导只能进入Windows系统, 而Debian的GRUB默认进入Debian系统, 可以修改GRUB使得bios引导GRUB后默认进入Windows</p>
+<h2 id="更改系统启动顺序">更改系统启动顺序</h2>
+<p>Windows 11的引导只能进入Windows系统, 而Debian的GRUB默认进入Debian系统, 可以修改GRUB使得bios引导GRUB后默认进入Windows</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> nano /etc/default/grub</span><br></pre></td></tr></table></figure>
 <p>找到以下行</p>
-<p>GRUB_DEFAULT&#x3D;0</p>
+<p>GRUB_DEFAULT=0</p>
 <p>编辑该行，将 0 替换为您要默认启动的项目编号。就我而言，我想将默认启动更改为 Windows。因此我设置了第三项2（因为计数从0开始）。</p>
-<p>GRUB_DEFAULT&#x3D;2</p>
+<p>GRUB_DEFAULT=2</p>
 <p>随后使用<code>sudo update-grub</code>重新加载grub</p>
 <p>参考资料<a target="_blank" rel="noopener" href="https://101.lug.ustc.edu.cn/">Linux 101</a></p>
 
@@ -286,6 +292,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2026/06/08/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86-%E7%AC%AC1%E7%AB%A0-%E7%BB%AA%E8%AE%BA-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" rel="next" title="通信原理 第1章 绪论 知识点总结">
+                  通信原理 第1章 绪论 知识点总结 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>

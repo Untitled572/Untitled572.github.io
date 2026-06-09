@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ut572.eu.org","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="知识点总结, 期末复习用, AI生成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通信原理 第2章 确知信号 知识点总结">
+<meta property="og:url" content="https://blog.ut572.eu.org/2026/06/08/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86-%E7%AC%AC2%E7%AB%A0-%E7%A1%AE%E7%9F%A5%E4%BF%A1%E5%8F%B7-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="572&#96;s Blog">
+<meta property="og:description" content="知识点总结, 期末复习用, AI生成">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-06-08T13:57:32.000Z">
+<meta property="article:modified_time" content="2026-06-09T02:29:58.310Z">
+<meta property="article:author" content="Untitled572">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.ut572.eu.org/2026/06/08/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86-%E7%AC%AC2%E7%AB%A0-%E7%A1%AE%E7%9F%A5%E4%BF%A1%E5%8F%B7-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.ut572.eu.org/2026/06/08/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86-%E7%AC%AC2%E7%AB%A0-%E7%A1%AE%E7%9F%A5%E4%BF%A1%E5%8F%B7-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/","path":"2026/06/08/通信原理-第2章-确知信号-知识点总结/","title":"通信原理 第2章 确知信号 知识点总结"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>通信原理 第2章 确知信号 知识点总结 | 572`s Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">572`s Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E7%A1%AE%E7%9F%A5%E4%BF%A1%E5%8F%B7%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">2.1 确知信号的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E7%A1%AE%E7%9F%A5%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E5%9F%9F%E6%80%A7%E8%B4%A8"><span class="nav-number">2.</span> <span class="nav-text">2.2 确知信号的频域性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-%E5%8A%9F%E7%8E%87%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%EF%BC%88%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">2.2.1 功率信号的频谱（周期信号）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-%E8%83%BD%E9%87%8F%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%E5%AF%86%E5%BA%A6"><span class="nav-number">2.2.</span> <span class="nav-text">2.2.2 能量信号的频谱密度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-%E8%83%BD%E9%87%8F%E8%B0%B1%E5%AF%86%E5%BA%A6%E4%B8%8E%E5%8A%9F%E7%8E%87%E8%B0%B1%E5%AF%86%E5%BA%A6"><span class="nav-number">2.3.</span> <span class="nav-text">2.2.3 能量谱密度与功率谱密度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E7%A1%AE%E7%9F%A5%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E6%80%A7%E8%B4%A8"><span class="nav-number">3.</span> <span class="nav-text">2.3 确知信号的时域性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-%E8%87%AA%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">2.3.1 自相关函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E8%83%BD%E9%87%8F%E4%BF%A1%E5%8F%B7%E7%9A%84%E8%87%AA%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.1.</span> <span class="nav-text">1、能量信号的自相关函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E5%8A%9F%E7%8E%87%E4%BF%A1%E5%8F%B7%E7%9A%84%E8%87%AA%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.2.</span> <span class="nav-text">2、功率信号的自相关函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-%E4%BA%92%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">2.3.2 互相关函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E8%83%BD%E9%87%8F%E4%BF%A1%E5%8F%B7%E7%9A%84%E4%BA%92%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.1.</span> <span class="nav-text">1、能量信号的互相关函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E5%8A%9F%E7%8E%87%E4%BF%A1%E5%8F%B7%E7%9A%84%E4%BA%92%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.2.</span> <span class="nav-text">2、功率信号的互相关函数</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Untitled572"
+      src="https://avatars.githubusercontent.com/Untitled572">
+  <p class="site-author-name" itemprop="name">Untitled572</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Untitled572" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Untitled572" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/404606741" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;404606741" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.ut572.eu.org/2026/06/08/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86-%E7%AC%AC2%E7%AB%A0-%E7%A1%AE%E7%9F%A5%E4%BF%A1%E5%8F%B7-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/Untitled572">
+      <meta itemprop="name" content="Untitled572">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="572`s Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="通信原理 第2章 确知信号 知识点总结 | 572`s Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          通信原理 第2章 确知信号 知识点总结
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-06-08 21:57:32" itemprop="dateCreated datePublished" datetime="2026-06-08T21:57:32+08:00">2026-06-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-06-09 10:29:58" itemprop="dateModified" datetime="2026-06-09T10:29:58+08:00">2026-06-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>知识点总结, 期末复习用, AI生成</p>
+<span id="more"></span>
+<h2 id="2-1-确知信号的类型">2.1 确知信号的类型</h2>
+<ul>
+<li><strong>确知信号的定义</strong>：在定义域内的任意时刻都有确定的函数值。反之则为随机信号或不确知信号。</li>
+<li><strong>按周期重复性分类</strong>：
+<ul>
+<li><strong>周期信号</strong>：每隔一定的时间间隔按相同规律重复，且无始无终。满足 $s(t) = s(t + T_0)$ 的最小 $T_0 &gt; 0$ 称为信号的<strong>基波周期</strong>。</li>
+<li><strong>非周期信号</strong>：不具备周期重复性的信号。</li>
+</ul>
+</li>
+<li><strong>按信号能量是否有限分类</strong>：
+<ul>
+<li><strong>能量信号</strong>：若信号的能量 $E$ 满足 $0 &lt; E &lt; \infty$ 且其平均功率 $P \to 0$，则称其为能量（有限）信号（如单个矩形脉冲）。</li>
+<li><strong>功率信号</strong>：若信号的平均功率 $P$ 满足 $0 &lt; P &lt; \infty$ 且其能量 $E \to \infty$，则称其为功率（有限）信号（如直流信号、周期信号 and 随机信号）。</li>
+<li><em>注意</em>：一个信号不可能既是能量信号又是功率信号。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-2-确知信号的频域性质">2.2 确知信号的频域性质</h2>
+<p>信号的频域性质反映了信号各频率分量的分布情况，涉及占用的频带宽度、滤波性能等，是信号最重要、最本质的性质之一。</p>
+<h3 id="2-2-1-功率信号的频谱（周期信号）">2.2.1 功率信号的频谱（周期信号）</h3>
+<p>对于周期为 $T_0$ 的功率信号 $s(t)$，可展开为指数型傅里叶级数：<br>
+$$s(t) = \sum_{n=-\infty}^{\infty} C_n e^{j 2 \pi n f_0 t}$$<br>
+其中，傅里叶级数系数（又称<strong>双边谱</strong>）为：<br>
+$$C_n = C(n f_0) = \frac{1}{T_0} \int_{-T_0/2}^{T_0/2} s(t) e^{-j 2 \pi n f_0 t} dt$$</p>
+<ul>
+<li>$f_0 = 1/T_0$ 称为信号的<strong>基频</strong>， $n f_0$ 称为信号的**$n$次谐波频率**。</li>
+<li>$|C_n|$ 随频率变化的特性称为<strong>幅度谱</strong>（其值为单边谱振幅的一半）。</li>
+<li>$\theta_n$ 随频率变化的特性称为<strong>相位谱</strong>。</li>
+<li>当 $n=0$ 时，$C_0$ 表示信号的时间平均值，即<strong>直流分量</strong>。</li>
+<li><strong>实信号频谱的性质</strong>：对于物理可实现的实信号，正频率部分和负频率部分间存在<strong>复数共轭关系</strong>，即 $|C_n|$ 满足<strong>模偶对称</strong>，$\theta_n$ 满足<strong>相位奇对称</strong>。</li>
+<li>若 $s(t)$ 是<strong>实偶信号</strong>，则 $C_n$ 为<strong>实函数</strong>；若 $s(t)$ 不是偶信号，则 $C_n$ 为<strong>复函数</strong>。</li>
+</ul>
+<h3 id="2-2-2-能量信号的频谱密度">2.2.2 能量信号的频谱密度</h3>
+<ul>
+<li><strong>定义</strong>：能量信号 $s(t)$ 的傅里叶变换即为频谱密度 $S(f)$：<br>
+$$S(f) = \int_{-\infty}^{\infty} s(t) e^{-j 2 \pi f t} dt$$</li>
+<li><strong>$S(f)$ 与 $C_n$ 的主要区别</strong>：$S(f)$ 是连续谱，单位是 $\text{V/Hz}$；$C_n$ 是离散谱，单位是 $\text{V}$。</li>
+<li><strong>重要物理特例</strong>：
+<ul>
+<li><strong>单位门函数（矩形脉冲）</strong>：其频谱密度为抽样函数（$\text{Sa}$ 函数）形式，且矩形脉冲的带宽等于其脉冲持续时间 $\tau$ 的倒数，即 $\frac{1}{\tau}\text{ Hz}$。</li>
+<li><strong>单位冲激函数（$\delta$ 函数）</strong>：频谱密度 $S(f) = 1$（全频域均匀分布）。</li>
+<li><em>冲激函数的引入</em>：利用冲激函数，可以把频谱密度的概念推广到功率信号上（例如：无限长余弦波 $\cos(2\pi f_0 t)$ 的频谱密度为 $\frac{1}{2}[\delta(f-f_0) + \delta(f+f_0)]$）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-3-能量谱密度与功率谱密度">2.2.3 能量谱密度与功率谱密度</h3>
+<ul>
+<li><strong>能量谱密度 $G(f)$</strong>：
+<ul>
+<li><em>定义</em>：$G(f) = |S(f)|^2$，用来描述能量信号的能量在频域上的分布情况。</li>
+<li><em>Parseval定理</em>：信号的总能量既可以在时域求解，也可以在频域对能量谱密度积分求解。</li>
+</ul>
+</li>
+<li><strong>功率谱密度 $P(f)$</strong>：
+<ul>
+<li><em>定义</em>：用来描述功率信号的功率在频域上的分布情况。</li>
+<li><em>周期信号的功率谱密度</em>：由各次谐波功率的冲激序列组成：<br>
+$$P(f) = \sum_{n=-\infty}^{\infty} |C_n|^2 \delta(f - n f_0)$$</li>
+<li>其中，$|C_n|^2$ 为第 $n$ 次谐波的功率。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-3-确知信号的时域性质">2.3 确知信号的时域性质</h2>
+<p>确知信号的时域性质可由自相关函数或互相关函数来描述。</p>
+<h3 id="2-3-1-自相关函数">2.3.1 自相关函数</h3>
+<h4 id="1、能量信号的自相关函数">1、能量信号的自相关函数</h4>
+<ul>
+<li><strong>定义</strong>：$R(\tau) = \int_{-\infty}^{\infty} s(t) s(t + \tau) dt$</li>
+<li><strong>性质</strong>：
+<ul>
+<li>与时间 $t$ 无关，只与时间差 $\tau$ 有关。</li>
+<li>当 $\tau = 0$ 时，$R(0) = E$（等于信号的总能量）。</li>
+<li>关于 $\tau$ 是<strong>偶函数</strong>：$R(\tau) = R(-\tau)$。</li>
+<li>自相关函数 $R(\tau)$ 和其能量谱密度 $|S(f)|^2$ 是一对傅里叶变换对。</li>
+</ul>
+</li>
+</ul>
+<h4 id="2、功率信号的自相关函数">2、功率信号的自相关函数</h4>
+<ul>
+<li><strong>定义</strong>：$R(\tau) = \lim_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} s(t) s(t + \tau) dt$</li>
+<li><strong>性质</strong>：
+<ul>
+<li>当 $\tau = 0$ 时，$R(0) = P$（等于信号的平均功率）。</li>
+<li>同样满足关于 $\tau$ 的偶对称性。</li>
+<li>功率信号的自相关函数 $R(\tau)$ 和其功率谱密度 $P(f)$ 是一对傅里叶变换对。</li>
+<li><em>典型结论</em>：周期性余弦信号 $s(t) = A\cos(\omega_0 t + \theta)$ 的自相关函数为 $R(\tau) = \frac{A^2}{2}\cos\omega_0 \tau$，其与初始相位 $\theta$ 无关。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-2-互相关函数">2.3.2 互相关函数</h3>
+<h4 id="1、能量信号的互相关函数">1、能量信号的互相关函数</h4>
+<ul>
+<li><strong>定义</strong>：$R_{12}(\tau) = \int_{-\infty}^{\infty} s_1(t) s_2(t + \tau) dt$</li>
+<li><strong>性质</strong>：
+<ul>
+<li>只与时间差 $\tau$ 有关。</li>
+<li>与两个信号相乘的前后次序有关，满足：$R_{12}(\tau) = R_{21}(-\tau)$。</li>
+<li>互相关函数 $R_{12}(\tau)$ 和<strong>互能量谱密度</strong> $S_{12}(f)$ 是一对傅里叶变换对。</li>
+</ul>
+</li>
+</ul>
+<h4 id="2、功率信号的互相关函数">2、功率信号的互相关函数</h4>
+<ul>
+<li><strong>定义</strong>：$R_{12}(\tau) = \lim_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} s_1(t) s_2(t + \tau) dt$</li>
+<li><strong>性质</strong>：
+<ul>
+<li>若两个周期性功率信号的周期相同，其互相关函数可在单个周期内积分求解。</li>
+<li>相乘次序改变时满足：$R_{12}(\tau) = R_{21}(-\tau)$。</li>
+<li>互相关函数 $R_{12}(\tau)$ 和<strong>互功率谱</strong> $C_{12}(f)$ 是一对傅里叶变换对。</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/06/08/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86-%E7%AC%AC1%E7%AB%A0-%E7%BB%AA%E8%AE%BA-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" rel="prev" title="通信原理 第1章 绪论 知识点总结">
+                  <i class="fa fa-angle-left"></i> 通信原理 第1章 绪论 知识点总结
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Untitled572</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><div class="run-time">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+  <script>
+      var now = new Date();
+      function createtime() {
+          var grt= new Date("2026/04/01 12:00:00"); 
+          now.setTime(now.getTime()+250);
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+          document.getElementById("timeDate").innerHTML = "本站已稳定运行 "+dnum+" 天 ";
+          document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+      }
+      setInterval("createtime()",250);
+  </script>
+</div>
+
+<div class="private-links" style="margin-top: 8px;">
+  <a href="https://ut572.eu.org" target="_blank" style="color: inherit; opacity: 0.7; font-size: 13px; border-bottom: none; text-shadow: 0 0 2px rgba(0,0,0,0.8);">
+    <i class="fa fa-server"></i> Console
+  </a>
+  
+  <span style="margin: 0 8px; opacity: 0.5; color: #fff; text-shadow: 0 0 2px rgba(0,0,0,0.8);">|</span>
+  
+  <a href="https://pan.ut572.eu.org/" target="_blank" style="color: inherit; opacity: 0.7; font-size: 13px; border-bottom: none; text-shadow: 0 0 2px rgba(0,0,0,0.8);">
+    <i class="fa fa-cloud"></i> Pan
+  </a>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"Untitled572/Untitled572.github.io","issue_term":"pathname","theme":"preferred-color-scheme","label":"Comment"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+
+</body>
+</html>
