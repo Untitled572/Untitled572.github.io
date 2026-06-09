@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ut572.eu.org","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="知识点总结, 期末复习用, AI生成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通信原理 知识点总结">
+<meta property="og:url" content="https://blog.ut572.eu.org/2026/06/08/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="572&#96;s Blog">
+<meta property="og:description" content="知识点总结, 期末复习用, AI生成">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-06-08T11:57:32.000Z">
+<meta property="article:modified_time" content="2026-06-09T12:41:00.255Z">
+<meta property="article:author" content="Untitled572">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.ut572.eu.org/2026/06/08/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.ut572.eu.org/2026/06/08/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/","path":"2026/06/08/通信原理知识点总结/","title":"通信原理 知识点总结"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>通信原理 知识点总结 | 572`s Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">572`s Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">第一章 绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E9%80%9A%E4%BF%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%8F%91%E5%B1%95"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 通信的基本概念与发展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1 通信的发展历程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E6%B6%88%E6%81%AF%E3%80%81%E4%BF%A1%E6%81%AF%E4%B8%8E%E4%BF%A1%E5%8F%B7"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.2 消息、信息与信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7%E4%B8%8E%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%86"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.1.3 模拟信号与数字信号的区分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 通信系统模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E4%B8%80%E8%88%AC%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1 通信系统一般模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-%E6%A8%A1%E6%8B%9F%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2 模拟通信系统模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-%E6%95%B0%E5%AD%97%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%89%B9%E7%82%B9"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.2.3 数字通信系统模型与特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E5%88%86%E7%B1%BB%E4%B8%8E%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 通信系统分类与通信方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E5%88%86%E7%B1%BB"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.3.1 通信系统分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2-%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.3.2 通信方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E4%BF%A1%E6%81%AF%E5%8F%8A%E5%85%B6%E5%BA%A6%E9%87%8F"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 信息及其度量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1 基本原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-%E7%A6%BB%E6%95%A3%E6%B6%88%E6%81%AF%E7%9A%84%E4%BF%A1%E6%81%AF%E9%87%8F%E8%AE%A1%E7%AE%97"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2 离散消息的信息量计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-3-%E7%A6%BB%E6%95%A3%E4%BF%A1%E6%BA%90%E7%9A%84%E5%B9%B3%E5%9D%87%E4%BF%A1%E6%81%AF%E9%87%8F%EF%BC%88%E4%BF%A1%E6%BA%90%E7%86%B5%EF%BC%89"><span class="nav-number">1.4.3.</span> <span class="nav-text">1.4.3 离散信源的平均信息量（信源熵）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-4-%E6%B6%88%E6%81%AF%E7%9A%84%E6%80%BB%E4%BF%A1%E6%81%AF%E9%87%8F%E8%AE%A1%E7%AE%97"><span class="nav-number">1.4.4.</span> <span class="nav-text">1.4.4 消息的总信息量计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 通信系统性能指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-1-%E6%A8%A1%E6%8B%9F%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%8C%87%E6%A0%87"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.5.1 模拟通信系统指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-2-%E6%95%B0%E5%AD%97%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-number">1.5.2.</span> <span class="nav-text">1.5.2 数字通信系统性能指标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E6%9C%89%E6%95%88%E6%80%A7%E6%8C%87%E6%A0%87"><span class="nav-number">1.5.2.1.</span> <span class="nav-text">1、有效性指标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E5%8F%AF%E9%9D%A0%E6%80%A7%E6%8C%87%E6%A0%87%EF%BC%88%E5%B7%AE%E9%94%99%E6%A6%82%E7%8E%87%EF%BC%89"><span class="nav-number">1.5.2.2.</span> <span class="nav-text">2、可靠性指标（差错概率）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8D%E8%AF%8D%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.6.</span> <span class="nav-text">名词转换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">第二章 确知信号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E7%A1%AE%E7%9F%A5%E4%BF%A1%E5%8F%B7%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 确知信号的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E7%A1%AE%E7%9F%A5%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E5%9F%9F%E6%80%A7%E8%B4%A8"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 确知信号的频域性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-%E5%8A%9F%E7%8E%87%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%EF%BC%88%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%EF%BC%89"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1 功率信号的频谱（周期信号）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-%E8%83%BD%E9%87%8F%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%E5%AF%86%E5%BA%A6"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2 能量信号的频谱密度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-%E8%83%BD%E9%87%8F%E8%B0%B1%E5%AF%86%E5%BA%A6%E4%B8%8E%E5%8A%9F%E7%8E%87%E8%B0%B1%E5%AF%86%E5%BA%A6"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.2.3 能量谱密度与功率谱密度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E7%A1%AE%E7%9F%A5%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E6%80%A7%E8%B4%A8"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 确知信号的时域性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-%E8%87%AA%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1 自相关函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E8%83%BD%E9%87%8F%E4%BF%A1%E5%8F%B7%E7%9A%84%E8%87%AA%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">1、能量信号的自相关函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E5%8A%9F%E7%8E%87%E4%BF%A1%E5%8F%B7%E7%9A%84%E8%87%AA%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">2、功率信号的自相关函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-%E4%BA%92%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2 互相关函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E8%83%BD%E9%87%8F%E4%BF%A1%E5%8F%B7%E7%9A%84%E4%BA%92%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">1、能量信号的互相关函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E5%8A%9F%E7%8E%87%E4%BF%A1%E5%8F%B7%E7%9A%84%E4%BA%92%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">2、功率信号的互相关函数</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">第三章 随机过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 随机过程的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E7%9A%84%E7%89%B9%E7%82%B9%E4%B8%8E%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.1.</span> <span class="nav-text">1. 随机过程的特点与定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E4%B8%8E%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.2.</span> <span class="nav-text">2. 分布函数与概率密度函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81"><span class="nav-number">3.1.3.</span> <span class="nav-text">3. 随机过程的数字特征</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9D%87%E5%80%BC-a-t-%EF%BC%9A%E6%91%86%E5%8A%A8%E4%B8%AD%E5%BF%83%EF%BC%88%E5%9C%A8%E5%93%AA%E9%87%8C%E6%99%83%E6%82%A0"><span class="nav-number">3.1.3.1.</span> <span class="nav-text">1. 均值 $a(t)$：摆动中心（在哪里晃悠)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%96%B9%E5%B7%AE-D-xi-t-%EF%BC%9A%E5%81%8F%E7%A6%BB%E7%A8%8B%E5%BA%A6%EF%BC%88%E6%99%83%E6%82%A0%E5%BE%97%E6%9C%89%E5%A4%9A%E5%87%B6%EF%BC%89"><span class="nav-number">3.1.3.2.</span> <span class="nav-text">2. 方差 $D[\xi(t)]$：偏离程度（晃悠得有多凶）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%87%AA%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0-R-t-1-t-2-%EF%BC%9A%E5%90%8C%E4%B8%80%E8%BF%87%E7%A8%8B%E7%9A%84%E5%85%B3%E8%81%94%E5%BA%A6%EF%BC%88%E5%89%8D%E5%90%8E%E7%9A%84%E8%AE%B0%E5%BF%86%E5%8A%9B%EF%BC%89"><span class="nav-number">3.1.3.3.</span> <span class="nav-text">3. 自相关函数 $R(t_1, t_2)$：同一过程的关联度（前后的记忆力）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E8%87%AA%E5%8D%8F%E6%96%B9%E5%B7%AE%E5%87%BD%E6%95%B0-B-t-1-t-2"><span class="nav-number">3.1.3.4.</span> <span class="nav-text">4. 自协方差函数 $B(t_1, t_2)$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E4%BA%92%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0-R-xi-eta-t-1-t-2-%EF%BC%9A%E4%B8%A4%E4%B8%AA%E8%BF%87%E7%A8%8B%E7%9A%84%E7%BB%91%E5%AE%9A%E5%BA%A6%EF%BC%88%E4%BD%A0%E4%BF%A9%E6%9C%89%E5%A4%9A%E9%BB%98%E5%A5%91%EF%BC%89"><span class="nav-number">3.1.3.5.</span> <span class="nav-text">4. 互相关函数 $R_{\xi\eta}(t_1, t_2)$：两个过程的绑定度（你俩有多默契）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%B9%B3%E7%A8%B3%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 平稳随机过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%B9%B3%E7%A8%B3%E6%80%A7%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%88%86%E7%B1%BB"><span class="nav-number">3.2.1.</span> <span class="nav-text">1. 平稳性的定义与分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%90%84%E6%80%81%E5%8E%86%E7%BB%8F%E6%80%A7%EF%BC%88%E9%81%8D%E5%8E%86%E6%80%A7%EF%BC%89"><span class="nav-number">3.2.2.</span> <span class="nav-text">2. 各态历经性（遍历性）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%B9%B3%E7%A8%B3%E8%BF%87%E7%A8%8B%E8%87%AA%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">3.2.3.</span> <span class="nav-text">3. 平稳过程自相关函数的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%8A%9F%E7%8E%87%E8%B0%B1%E5%AF%86%E5%BA%A6%EF%BC%88PSD%EF%BC%89"><span class="nav-number">3.2.4.</span> <span class="nav-text">4. 功率谱密度（PSD）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E9%AB%98%E6%96%AF%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 高斯随机过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89%E4%B8%8E%E9%87%8D%E8%A6%81%E6%80%A7%E8%B4%A8"><span class="nav-number">3.3.1.</span> <span class="nav-text">1. 定义与重要性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%AB%98%E6%96%AF%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.3.2.</span> <span class="nav-text">2. 高斯随机变量及其分布函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E5%B9%B3%E7%A8%B3%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E9%80%9A%E8%BF%87%E7%BA%BF%E6%80%A7%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 平稳随机过程通过线性系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E7%AA%84%E5%B8%A6%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 窄带随机过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%AA%84%E5%B8%A6%E6%9D%A1%E4%BB%B6%E4%B8%8E%E6%B3%A2%E5%BD%A2%E7%89%B9%E7%82%B9"><span class="nav-number">3.5.1.</span> <span class="nav-text">1. 窄带条件与波形特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%AA%84%E5%B8%A6%E8%BF%87%E7%A8%8B%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">3.5.2.</span> <span class="nav-text">2. 窄带过程的表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%BB%84%E4%BB%B6%E7%9A%84%E7%BB%9F%E8%AE%A1%E7%89%B9%E6%80%A7%E7%BB%93%E8%AE%BA"><span class="nav-number">3.5.3.</span> <span class="nav-text">3. 组件的统计特性结论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-%E6%AD%A3%E5%BC%A6%E6%B3%A2%E5%8A%A0%E7%AA%84%E5%B8%A6%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B"><span class="nav-number">3.6.</span> <span class="nav-text">3.6 正弦波加窄带高斯过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-7-%E9%AB%98%E6%96%AF%E7%99%BD%E5%99%AA%E5%A3%B0%E5%92%8C%E5%B8%A6%E9%99%90%E7%99%BD%E5%99%AA%E5%A3%B0"><span class="nav-number">3.7.</span> <span class="nav-text">3.7 高斯白噪声和带限白噪声</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">第四章 信道</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E6%97%A0%E7%BA%BF%E4%BF%A1%E9%81%93"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 无线信道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BF%A1%E9%81%93%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%88%86%E7%B1%BB"><span class="nav-number">4.1.1.</span> <span class="nav-text">1. 信道的定义与分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%9C%B0%E7%90%83%E5%A4%A7%E6%B0%94%E5%B1%82%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">4.1.2.</span> <span class="nav-text">2. 地球大气层的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%94%B5%E7%A3%81%E6%B3%A2%E7%9A%84%E4%BC%A0%E6%92%AD%E6%96%B9%E5%BC%8F"><span class="nav-number">4.1.3.</span> <span class="nav-text">3. 电磁波的传播方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E6%9C%89%E7%BA%BF%E4%BF%A1%E9%81%93"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 有线信道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%98%8E%E7%BA%BF"><span class="nav-number">4.2.1.</span> <span class="nav-text">1. 明线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AF%B9%E7%A7%B0%E7%94%B5%E7%BC%86%EF%BC%88%E5%8F%8C%E7%BB%9E%E7%BA%BF-Twisted-Pair%EF%BC%89"><span class="nav-number">4.2.2.</span> <span class="nav-text">2. 对称电缆（双绞线 Twisted Pair）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%90%8C%E8%BD%B4%E7%94%B5%E7%BC%86"><span class="nav-number">4.2.3.</span> <span class="nav-text">3. 同轴电缆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%85%89%E7%BA%A4-Optical-Fiber"><span class="nav-number">4.2.4.</span> <span class="nav-text">4. 光纤 (Optical Fiber)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E4%BF%A1%E9%81%93%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 信道数学模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%B0%83%E5%88%B6%E4%BF%A1%E9%81%93%E6%A8%A1%E5%9E%8B%EF%BC%88%E8%BF%9E%E7%BB%AD%E4%BF%A1%E9%81%93%EF%BC%89"><span class="nav-number">4.3.1.</span> <span class="nav-text">1. 调制信道模型（连续信道）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BC%96%E7%A0%81%E4%BF%A1%E9%81%93%E6%A8%A1%E5%9E%8B%EF%BC%88%E7%A6%BB%E6%95%A3%E4%BF%A1%E9%81%93%EF%BC%89"><span class="nav-number">4.3.2.</span> <span class="nav-text">2. 编码信道模型（离散信道）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E6%81%92%E5%8F%82-%E9%9A%8F%E5%8F%82%E4%BF%A1%E9%81%93%E7%89%B9%E6%80%A7%E5%AF%B9%E4%BF%A1%E5%8F%B7%E4%BC%A0%E8%BE%93%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 恒参&#x2F;随参信道特性对信号传输的影响</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%81%92%E5%8F%82%E4%BF%A1%E9%81%93%E5%AF%B9%E4%BF%A1%E5%8F%B7%E4%BC%A0%E8%BE%93%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">4.4.1.</span> <span class="nav-text">1. 恒参信道对信号传输的影响</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%9A%8F%E5%8F%82%E4%BF%A1%E9%81%93%E5%AF%B9%E4%BF%A1%E5%8F%B7%E4%BC%A0%E8%BE%93%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">4.4.2.</span> <span class="nav-text">2. 随参信道对信号传输的影响</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-%E4%BF%A1%E9%81%93%E5%99%AA%E5%A3%B0"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 信道噪声</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%99%AA%E5%A3%B0%E5%88%86%E7%B1%BB%E4%B8%8E%E6%A6%82%E5%BF%B5"><span class="nav-number">4.5.1.</span> <span class="nav-text">1. 噪声分类与概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%B5%B7%E4%BC%8F%E5%99%AA%E5%A3%B0%E4%B8%AD%E7%9A%84%E7%83%AD%E5%99%AA%E5%A3%B0"><span class="nav-number">4.5.2.</span> <span class="nav-text">2. 起伏噪声中的热噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B5%B7%E4%BC%8F%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E6%80%A7%E8%B4%A8%E5%BD%92%E7%BA%B3"><span class="nav-number">4.5.3.</span> <span class="nav-text">3. 起伏噪声的统计性质归纳</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%99%AA%E5%A3%B0%E7%AD%89%E6%95%88%E5%B8%A6%E5%AE%BD-B-n"><span class="nav-number">4.5.4.</span> <span class="nav-text">4. 噪声等效带宽 ($B_n$)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-6-%E4%BF%A1%E9%81%93%E5%AE%B9%E9%87%8F"><span class="nav-number">4.6.</span> <span class="nav-text">4.6 信道容量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%89%A9%E7%90%86%E9%87%8F%E5%AE%9A%E4%B9%89"><span class="nav-number">4.6.1.</span> <span class="nav-text">1. 概念与基本物理量定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%BF%9E%E7%BB%AD%E4%BF%A1%E9%81%93%E5%AE%B9%E9%87%8F-%E2%80%94%E2%80%94-%E9%A6%99%E5%86%9C%E5%85%AC%E5%BC%8F-Shannon-Formula"><span class="nav-number">4.6.2.</span> <span class="nav-text">2. 连续信道容量 —— 香农公式 (Shannon Formula)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">第五章 模拟调制系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E5%B9%85%E5%BA%A6%E8%B0%83%E5%88%B6%EF%BC%88%E7%BA%BF%E6%80%A7%E8%B0%83%E5%88%B6%EF%BC%89%E5%8E%9F%E7%90%86"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 幅度调制（线性调制）原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%B0%83%E5%88%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E7%9B%AE%E7%9A%84"><span class="nav-number">5.1.1.</span> <span class="nav-text">1. 调制的基本概念与目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B8%B8%E8%A7%84%E8%B0%83%E5%B9%85%EF%BC%88AM%EF%BC%89"><span class="nav-number">5.1.2.</span> <span class="nav-text">2. 常规调幅（AM）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%8F%8C%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%EF%BC%88DSB-SC%EF%BC%89"><span class="nav-number">5.1.3.</span> <span class="nav-text">3. 双边带调制（DSB-SC）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%8D%95%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%EF%BC%88SSB%EF%BC%89"><span class="nav-number">5.1.4.</span> <span class="nav-text">4. 单边带调制（SSB）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%AE%8B%E7%95%99%E8%BE%B9%E5%B8%A6%E8%B0%83%E5%88%B6%EF%BC%88VSB%EF%BC%89"><span class="nav-number">5.1.5.</span> <span class="nav-text">5. 残留边带调制（VSB）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E7%BA%BF%E6%80%A7%E8%A7%A3%E8%B0%83%E6%96%B9%E5%BC%8F"><span class="nav-number">5.1.6.</span> <span class="nav-text">6. 线性解调方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E7%BA%BF%E6%80%A7%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 线性调制系统的抗噪声性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%86%E6%9E%90%E6%8C%87%E6%A0%87%EF%BC%9A%E5%88%B6%E5%BA%A6%E5%A2%9E%E7%9B%8A-G"><span class="nav-number">5.2.1.</span> <span class="nav-text">1. 分析指标：制度增益 ($G$)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-DSB-%E4%B8%8E-SSB-%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD%E6%AF%94%E8%BE%83"><span class="nav-number">5.2.2.</span> <span class="nav-text">2. DSB 与 SSB 的抗噪声性能比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-AM-%E5%8C%85%E7%BB%9C%E6%A3%80%E6%B3%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD%E4%B8%8E%E9%97%A8%E9%99%90%E6%95%88%E5%BA%94"><span class="nav-number">5.2.3.</span> <span class="nav-text">3. AM 包络检波系统的抗噪声性能与门限效应</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%B0%83%E5%88%B6%EF%BC%88%E8%A7%92%E5%BA%A6%E8%B0%83%E5%88%B6%EF%BC%89%E5%8E%9F%E7%90%86"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 非线性调制（角度调制）原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%A7%92%E5%BA%A6%E8%B0%83%E5%88%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">5.3.1.</span> <span class="nav-text">1. 角度调制的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%8D%95%E9%9F%B3%E8%B0%83%E9%A2%91%E4%B8%8E%E5%8D%A1%E6%A3%AE%E5%85%AC%E5%BC%8F%EF%BC%88FM-%E5%B8%A6%E5%AE%BD%EF%BC%89"><span class="nav-number">5.3.2.</span> <span class="nav-text">2. 单音调频与卡森公式（FM 带宽）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B0%83%E9%A2%91%E4%BF%A1%E5%8F%B7%E7%9A%84%E4%BA%A7%E7%94%9F%E4%B8%8E%E8%A7%A3%E8%B0%83"><span class="nav-number">5.3.3.</span> <span class="nav-text">3. 调频信号的产生与解调</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-%E8%B0%83%E9%A2%91%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 调频系统的抗噪声性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%A4%A7%E4%BF%A1%E5%99%AA%E6%AF%94%E6%97%B6%E7%9A%84%E8%A7%A3%E8%B0%83%E6%80%A7%E8%83%BD%EF%BC%88%E4%BB%A5%E5%B8%A6%E5%AE%BD%E6%8D%A2%E5%8F%96%E4%BF%A1%E5%99%AA%E6%AF%94%EF%BC%89"><span class="nav-number">5.4.1.</span> <span class="nav-text">1. 大信噪比时的解调性能（以带宽换取信噪比）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B0%8F%E4%BF%A1%E5%99%AA%E6%AF%94%E6%97%B6%E7%9A%84%E9%97%A8%E9%99%90%E6%95%88%E5%BA%94"><span class="nav-number">5.4.2.</span> <span class="nav-text">2. 小信噪比时的门限效应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%A2%84%E5%8A%A0%E9%87%8D%E5%92%8C%E5%8E%BB%E5%8A%A0%E9%87%8D%E6%8A%80%E6%9C%AF"><span class="nav-number">5.4.3.</span> <span class="nav-text">3. 预加重和去加重技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-%E5%90%84%E7%A7%8D%E6%A8%A1%E6%8B%9F%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%BC%E5%90%88%E6%AF%94%E8%BE%83"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 各种模拟调制系统的综合比较</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E7%BB%B4%E5%BA%A6%E6%80%BB%E5%BD%92%E7%BA%B3%EF%BC%9A"><span class="nav-number">5.5.1.</span> <span class="nav-text">性能维度总归纳：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6-%E9%A2%91%E5%88%86%E5%A4%8D%E7%94%A8-FDM"><span class="nav-number">5.6.</span> <span class="nav-text">5.6 频分复用 (FDM)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">第六章 数字基带传输</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E5%BC%95%E8%A8%80%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BB%84%E6%88%90"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 引言与系统组成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%B3%BB%E7%BB%9F%E7%89%B9%E5%BE%81%E4%B8%8E%E6%84%8F%E4%B9%89"><span class="nav-number">6.1.1.</span> <span class="nav-text">1. 基带传输系统特征与意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%B3%BB%E7%BB%9F%E7%BB%84%E6%88%90%E7%BB%93%E6%9E%84"><span class="nav-number">6.1.2.</span> <span class="nav-text">2. 基带传输系统组成结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7%E5%8F%8A%E5%85%B6%E9%A2%91%E8%B0%B1%E7%89%B9%E6%80%A7"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 数字基带信号及其频谱特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%85%AD%E7%A7%8D%E5%9F%BA%E6%9C%AC%E4%BF%A1%E5%8F%B7%E6%B3%A2%E5%BD%A2"><span class="nav-number">6.2.1.</span> <span class="nav-text">1. 六种基本信号波形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%E7%89%B9%E6%80%A7%EF%BC%88PSD%EF%BC%89"><span class="nav-number">6.2.2.</span> <span class="nav-text">2. 基带信号的频谱特性（PSD）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%9F%E7%8E%87%E8%B0%B1%E7%89%B9%E6%80%A7%E5%BD%92%E7%BA%B3%EF%BC%9A"><span class="nav-number">6.2.2.1.</span> <span class="nav-text">功率谱特性归纳：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%9A%84%E5%B8%B8%E7%94%A8%E7%A0%81%E5%9E%8B"><span class="nav-number">6.3.</span> <span class="nav-text">6.3 基带传输的常用码型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%80%89%E7%A0%81%E5%8E%9F%E5%88%99"><span class="nav-number">6.3.1.</span> <span class="nav-text">1. 选码原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BC%A0%E8%BE%93%E7%A0%81%E5%9E%8B"><span class="nav-number">6.3.2.</span> <span class="nav-text">2. 几种常用的传输码型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-%E6%95%B0%E5%AD%97%E5%9F%BA%E5%B8%A6%E4%BF%A1%E5%8F%B7%E4%BC%A0%E8%BE%93%E4%B8%8E%E7%A0%81%E9%97%B4%E4%B8%B2%E6%89%B0%EF%BC%88ISI%EF%BC%89"><span class="nav-number">6.4.</span> <span class="nav-text">6.4 数字基带信号传输与码间串扰（ISI）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%A0%81%E9%97%B4%E4%B8%B2%E6%89%B0%EF%BC%88ISI%EF%BC%89%E7%9A%84%E5%AE%9A%E9%87%8F%E5%88%86%E6%9E%90"><span class="nav-number">6.4.1.</span> <span class="nav-text">1. 码间串扰（ISI）的定量分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%97%A0%E7%A0%81%E9%97%B4%E4%B8%B2%E6%89%B0%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="nav-number">6.4.2.</span> <span class="nav-text">2. 无码间串扰的条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-H-omega-%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">6.4.3.</span> <span class="nav-text">3. $H(\omega)$ 的设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-%E5%9F%BA%E5%B8%A6%E4%BC%A0%E8%BE%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-number">6.5.</span> <span class="nav-text">6.5 基带传输系统的抗噪声性能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-%E7%9C%BC%E5%9B%BE%EF%BC%88Eye-Diagram%EF%BC%89"><span class="nav-number">6.6.</span> <span class="nav-text">6.6 眼图（Eye Diagram）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-%E9%83%A8%E5%88%86%E5%93%8D%E5%BA%94%E5%92%8C%E6%97%B6%E5%9F%9F%E5%9D%87%E8%A1%A1"><span class="nav-number">6.7.</span> <span class="nav-text">6.7 部分响应和时域均衡</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%83%A8%E5%88%86%E5%93%8D%E5%BA%94%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3"><span class="nav-number">6.7.1.</span> <span class="nav-text">1. 部分响应系统设计思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%AC%AC%E2%85%A0%E7%B1%BB%E9%83%A8%E5%88%86%E5%93%8D%E5%BA%94%E7%B3%BB%E7%BB%9F%E4%B8%8E%E5%B7%AE%E9%94%99%E4%BC%A0%E6%92%AD"><span class="nav-number">6.7.2.</span> <span class="nav-text">2. 第Ⅰ类部分响应系统与差错传播</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A7%A3%E5%86%B3%E5%B7%AE%E9%94%99%E4%BC%A0%E6%92%AD%E7%9A%84%E9%80%94%E5%BE%84%EF%BC%9A%E9%A2%84%E7%BC%96%E7%A0%81%E6%8A%80%E6%9C%AF"><span class="nav-number">6.7.3.</span> <span class="nav-text">3. 解决差错传播的途径：预编码技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E9%83%A8%E5%88%86%E5%93%8D%E5%BA%94%E7%9A%84%E4%B8%80%E8%88%AC%E5%BD%A2%E5%BC%8F%E4%B8%8E%E5%BA%94%E7%94%A8"><span class="nav-number">6.7.4.</span> <span class="nav-text">4. 部分响应的一般形式与应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">第七章 数字调制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-%E6%95%B0%E5%AD%97%E8%B0%83%E5%88%B6%E6%A6%82%E8%BF%B0"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 数字调制概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E5%AD%97%E8%B0%83%E5%88%B6%E5%8E%9F%E7%90%86"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 二进制数字调制原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2ASK%EF%BC%88%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%8C%AF%E5%B9%85%E9%94%AE%E6%8E%A7-OOK%EF%BC%89"><span class="nav-number">7.2.1.</span> <span class="nav-text">1. 2ASK（二进制振幅键控 &#x2F; OOK）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2FSK%EF%BC%88%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%A2%91%E7%A7%BB%E9%94%AE%E6%8E%A7%EF%BC%89"><span class="nav-number">7.2.2.</span> <span class="nav-text">2. 2FSK（二进制频移键控）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2PSK%EF%BC%88%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9B%B8%E7%A7%BB%E9%94%AE%E6%8E%A7%EF%BC%89"><span class="nav-number">7.2.3.</span> <span class="nav-text">3. 2PSK（二进制相移键控）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2DPSK%EF%BC%88%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%B7%AE%E5%88%86%E7%9B%B8%E7%A7%BB%E9%94%AE%E6%8E%A7-%E7%9B%B8%E5%AF%B9%E8%B0%83%E7%9B%B8%EF%BC%89"><span class="nav-number">7.2.4.</span> <span class="nav-text">4. 2DPSK（二进制差分相移键控 &#x2F; 相对调相）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E5%AD%97%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%E6%8A%97%E5%99%AA%E5%A3%B0%E6%80%A7%E8%83%BD"><span class="nav-number">7.3.</span> <span class="nav-text">7.3 二进制数字调制系统抗噪声性能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E5%AD%97%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E6%AF%94%E8%BE%83"><span class="nav-number">7.4.</span> <span class="nav-text">7.4 二进制数字调制系统性能比较</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Reliable%EF%BC%88%E5%8F%AF%E9%9D%A0%E6%80%A7-%E8%AF%AF%E7%A0%81%E7%8E%87%E6%80%A7%E8%83%BD%EF%BC%89"><span class="nav-number">7.4.1.</span> <span class="nav-text">1. Reliable（可靠性 &#x2F; 误码率性能）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Efficiency%EF%BC%88%E6%9C%89%E6%95%88%E6%80%A7-%E9%A2%91%E5%B8%A6%E5%AE%BD%E5%BA%A6%EF%BC%89"><span class="nav-number">7.4.2.</span> <span class="nav-text">2. Efficiency（有效性 &#x2F; 频带宽度）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%AE%BE%E5%A4%87%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">7.4.3.</span> <span class="nav-text">3. 设备复杂度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-5-%E5%A4%9A%E8%BF%9B%E5%88%B6%E6%95%B0%E5%AD%97%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%EF%BC%88M-%E8%BF%9B%E5%88%B6%E8%B0%83%E5%88%B6%EF%BC%89"><span class="nav-number">7.5.</span> <span class="nav-text">7.5 多进制数字调制系统（M 进制调制）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A0%B8%E5%BF%83%E5%BC%95%E5%85%A5%E8%83%8C%E6%99%AF"><span class="nav-number">7.5.1.</span> <span class="nav-text">1. 核心引入背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-MASK%EF%BC%88%E5%A4%9A%E8%BF%9B%E5%88%B6%E6%8C%AF%E5%B9%85%E9%94%AE%E6%8E%A7%EF%BC%89"><span class="nav-number">7.5.2.</span> <span class="nav-text">2. MASK（多进制振幅键控）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-MFSK%EF%BC%88%E5%A4%9A%E8%BF%9B%E5%88%B6%E9%A2%91%E7%A7%BB%E9%94%AE%E6%8E%A7%EF%BC%89"><span class="nav-number">7.5.3.</span> <span class="nav-text">3. MFSK（多进制频移键控）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-MPSK%EF%BC%88%E5%A4%9A%E8%BF%9B%E5%88%B6%E7%9B%B8%E7%A7%BB%E9%94%AE%E6%8E%A7%EF%BC%89"><span class="nav-number">7.5.4.</span> <span class="nav-text">4. MPSK（多进制相移键控）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-QPSK%EF%BC%884PSK-%E6%AD%A3%E4%BA%A4%E7%9B%B8%E7%A7%BB%E9%94%AE%E6%8E%A7%EF%BC%89"><span class="nav-number">7.5.5.</span> <span class="nav-text">5. QPSK（4PSK &#x2F; 正交相移键控）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-MDPSK%EF%BC%88%E5%A4%9A%E8%BF%9B%E5%88%B6%E5%B7%AE%E5%88%86%E7%9B%B8%E7%A7%BB%E9%94%AE%E6%8E%A7%EF%BC%89"><span class="nav-number">7.5.6.</span> <span class="nav-text">6. MDPSK（多进制差分相移键控）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">第十章 信源编码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-1-%E4%BF%A1%E6%BA%90%E7%BC%96%E7%A0%81%E6%A6%82%E8%BF%B0%E4%B8%8E%E5%BC%95%E8%A8%80"><span class="nav-number">8.1.</span> <span class="nav-text">10.1 信源编码概述与引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BF%A1%E6%BA%90%E7%BC%96%E7%A0%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81"><span class="nav-number">8.1.1.</span> <span class="nav-text">1. 信源编码的基本特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BF%A1%E6%BA%90%E7%BC%96%E7%A0%81%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8%E4%B8%8E%E7%9B%AE%E7%9A%84"><span class="nav-number">8.1.2.</span> <span class="nav-text">2. 信源编码的主要作用与目的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-2-%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%8A%BD%E6%A0%B7%EF%BC%88Sampling%EF%BC%89"><span class="nav-number">8.2.</span> <span class="nav-text">10.2 模拟信号的抽样（Sampling）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BD%8E%E9%80%9A%E6%8A%BD%E6%A0%B7%E5%AE%9A%E7%90%86"><span class="nav-number">8.2.1.</span> <span class="nav-text">1. 低通抽样定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B8%A6%E9%80%9A%E6%8A%BD%E6%A0%B7%E5%AE%9A%E7%90%86"><span class="nav-number">8.2.2.</span> <span class="nav-text">2. 带通抽样定理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-3-%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%87%8F%E5%8C%96%EF%BC%88Quantization%EF%BC%89"><span class="nav-number">8.3.</span> <span class="nav-text">10.3 模拟信号的量化（Quantization）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9D%87%E5%8C%80%E9%87%8F%E5%8C%96"><span class="nav-number">8.3.1.</span> <span class="nav-text">1. 均匀量化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%9D%9E%E5%9D%87%E5%8C%80%E9%87%8F%E5%8C%96%EF%BC%88A%E5%BE%8B%E4%B8%8E-mu-%E5%BE%8B%EF%BC%89"><span class="nav-number">8.3.2.</span> <span class="nav-text">2. 非均匀量化（A律与 $\mu$律）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-4-%E8%84%89%E5%86%B2%E7%BC%96%E7%A0%81%E8%B0%83%E5%88%B6%EF%BC%88PCM%EF%BC%89"><span class="nav-number">8.4.</span> <span class="nav-text">10.4 脉冲编码调制（PCM）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-PCM-%E7%BC%96%E7%A0%81%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-number">8.4.1.</span> <span class="nav-text">1. PCM 编码基本原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-A-%E5%BE%8B-13-%E6%8A%98%E7%BA%BF-8-%E4%BD%8D%E7%A0%81%E7%BC%96%E7%A0%81%E8%A7%84%E5%88%99"><span class="nav-number">8.4.2.</span> <span class="nav-text">2. A 律 13 折线 8 位码编码规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%80%90%E6%AC%A1%E6%AF%94%E8%BE%83%E5%9E%8B%E7%BC%96%E7%A0%81%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">8.4.3.</span> <span class="nav-text">3. 逐次比较型编码器工作原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-5-%E5%B7%AE%E5%88%86%E8%84%89%E5%86%B2%E7%BC%96%E7%A0%81%E8%B0%83%E5%88%B6%EF%BC%88DPCM%EF%BC%89%E4%B8%8E%E5%A2%9E%E9%87%8F%E8%B0%83%E5%88%B6%EF%BC%88-Delta-M-%EF%BC%89"><span class="nav-number">8.5.</span> <span class="nav-text">10.5 差分脉冲编码调制（DPCM）与增量调制（$\Delta M$）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-DPCM%EF%BC%88%E5%B7%AE%E5%88%86%E8%84%89%E5%86%B2%E7%BC%96%E7%A0%81%E8%B0%83%E5%88%B6%EF%BC%89"><span class="nav-number">8.5.1.</span> <span class="nav-text">1. DPCM（差分脉冲编码调制）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Delta-M-%EF%BC%88%E5%A2%9E%E9%87%8F%E8%B0%83%E5%88%B6-DM%EF%BC%89"><span class="nav-number">8.5.2.</span> <span class="nav-text">2. $\Delta M$（增量调制 &#x2F; DM）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%A2%9E%E9%87%8F%E8%B0%83%E5%88%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E4%B8%A4%E5%A4%A7%E7%B1%BB%E5%99%AA%E5%A3%B0"><span class="nav-number">8.5.3.</span> <span class="nav-text">3. 增量调制系统中的两大类噪声</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-6-%E6%97%B6%E5%88%86%E5%A4%8D%E7%94%A8%EF%BC%88TDM%EF%BC%89%E4%B8%8E%E5%A4%9A%E8%B7%AF%E6%95%B0%E5%AD%97%E7%94%B5%E8%AF%9D%E7%B3%BB%E7%BB%9F"><span class="nav-number">8.6.</span> <span class="nav-text">10.6 时分复用（TDM）与多路数字电话系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%97%B6%E5%88%86%E5%A4%8D%E7%94%A8%EF%BC%88TDM%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-number">8.6.1.</span> <span class="nav-text">1. 时分复用（TDM）基本原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-PCM-30-32-%E8%B7%AF%E6%95%B0%E5%AD%97%E7%94%B5%E8%AF%9D%E7%B3%BB%E7%BB%9F%EF%BC%88E1-%E5%9F%BA%E7%BE%A4%E5%B8%A7%E7%BB%93%E6%9E%84%EF%BC%89"><span class="nav-number">8.6.2.</span> <span class="nav-text">2. PCM 30&#x2F;32 路数字电话系统（E1 基群帧结构）</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Untitled572"
+      src="https://avatars.githubusercontent.com/Untitled572">
+  <p class="site-author-name" itemprop="name">Untitled572</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Untitled572" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Untitled572" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/404606741" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;404606741" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.ut572.eu.org/2026/06/08/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/Untitled572">
+      <meta itemprop="name" content="Untitled572">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="572`s Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="通信原理 知识点总结 | 572`s Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          通信原理 知识点总结
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-06-08 19:57:32" itemprop="dateCreated datePublished" datetime="2026-06-08T19:57:32+08:00">2026-06-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-06-09 20:41:00" itemprop="dateModified" datetime="2026-06-09T20:41:00+08:00">2026-06-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>知识点总结, 期末复习用, AI生成</p>
+<span id="more"></span>
+<h1>第一章 绪论</h1>
+<h2 id="1-1-通信的基本概念与发展">1.1 通信的基本概念与发展</h2>
+<h3 id="1-1-1-通信的发展历程">1.1.1 通信的发展历程</h3>
+<ul>
+<li><strong>古代与传统通信</strong>：击鼓、鸣金、烽火。</li>
+<li><strong>近现代通信</strong>：电报、电话、电视、因特网。</li>
+<li><strong>发展趋势</strong>：数字化、智能化、高速化、宽带化、移动化、个人化、综合化。</li>
+</ul>
+<h3 id="1-1-2-消息、信息与信号">1.1.2 消息、信息与信号</h3>
+<ul>
+<li><strong>消息（Message）</strong>：通信系统传输的对象。表现形式多种多样，可分为：
+<ul>
+<li><strong>连续消息</strong>：语音、温度、图像等。</li>
+<li><strong>离散消息</strong>：数据、文字、符号等。</li>
+</ul>
+</li>
+<li><strong>信息（Information）</strong>：消息中蕴含的<strong>有效内容</strong>，是消息的内涵。消息中不确定的内容才构成信息。</li>
+<li><strong>信号（Signal）</strong>：消息的<strong>电表示形式/传输载体</strong>。</li>
+<li><strong>电通信与通信系统</strong>：
+<ul>
+<li><strong>电通信</strong>：利用电信号传输消息中所包含的信息。</li>
+<li><strong>通信系统</strong>：完成通信过程所需的电子设备和信道的总体。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-1-3-模拟信号与数字信号的区分">1.1.3 模拟信号与数字信号的区分</h3>
+<ul>
+<li><strong>区分原则</strong>：看<strong>携载消息的信号参量取值</strong>。</li>
+<li><strong>模拟信号</strong>：信号参量取值<strong>连续</strong>（有无穷多个取值）。</li>
+<li><strong>数字信号</strong>：信号参量取值<strong>离散</strong>（有有限个取值）。</li>
+</ul>
+<hr>
+<h2 id="1-2-通信系统模型">1.2 通信系统模型</h2>
+<h3 id="1-2-1-通信系统一般模型">1.2.1 通信系统一般模型</h3>
+<p>一个通用的通信系统模型包含以下五个基本部分：<br>
+$$\text{信源} \longrightarrow \text{发送设备} \longrightarrow \text{信道(受噪声干扰)} \longrightarrow \text{接收设备} \longrightarrow \text{信宿}$$</p>
+<ul>
+<li><strong>信源（Source）</strong>：将消息转换为原始电信号，例如话筒将声音转变为音频信号。</li>
+<li><strong>发送设备（Transmitter）</strong>：将原始电信号变换成适合在信道中传输的信号（如进行编码、调制）。</li>
+<li><strong>信道（Channel）</strong>：能够传输信号的各种物理媒介，传输过程中会受到<strong>噪声（Noise）</strong> 的干扰。</li>
+<li><strong>接收设备（Receiver）</strong>：功能与发送设备相反，将接收到的信号进行译码、解调，还原为原始电信号。</li>
+<li><strong>信宿（Destination）</strong>：将电信号还原为消息，例如听筒将音频信号还原为声音。</li>
+</ul>
+<h3 id="1-2-2-模拟通信系统模型">1.2.2 模拟通信系统模型</h3>
+<ul>
+<li><strong>核心变换</strong>：
+<ol>
+<li>模拟消息 $\Leftrightarrow$ 原始电信号（基带信号）</li>
+<li>基带信号 $\Leftrightarrow$ 已调信号（带通信号）</li>
+</ol>
+</li>
+<li><strong>基本概念</strong>：
+<ul>
+<li><strong>调制</strong>：把信息寄托到载波上。</li>
+<li><strong>解调</strong>：从已调信号中卸载信息。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-3-数字通信系统模型与特点">1.2.3 数字通信系统模型与特点</h3>
+<ul>
+<li><strong>特有模块</strong>：
+<ul>
+<li><strong>信源编码</strong>：负责模/数（A/D）转换，核心作用是<strong>提高有效性</strong>。</li>
+<li><strong>信道编码</strong>：通过增加冗余来<strong>增强抗干扰能力</strong>（提高可靠性）。</li>
+<li><strong>同步</strong>：数字通信系统所必需的关键技术。</li>
+</ul>
+</li>
+<li><strong>数字通信的优缺点</strong>：
+<ul>
+<li><strong>优点</strong>：抗干扰能力强且噪声不积累；传输差错可控；便于处理、变换、存储；便于综合传输；易于集成和加密。</li>
+<li><strong>缺点</strong>：可能需要较大的传输带宽；对同步要求高。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="1-3-通信系统分类与通信方式">1.3 通信系统分类与通信方式</h2>
+<h3 id="1-3-1-通信系统分类">1.3.1 通信系统分类</h3>
+<p>通信系统可以根据不同的维度进行分类，同一个通信系统可以分属于不同分类：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">分类依据</th>
+<th style="text-align:left">分类结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>按信道信号特征</strong></td>
+<td style="text-align:left">模拟通信、数字通信</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>按传输媒质</strong></td>
+<td style="text-align:left">有线通信、无线通信</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>按传输方式</strong></td>
+<td style="text-align:left">基带传输、带通传输</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>按通信业务</strong></td>
+<td style="text-align:left">电话、数据、图像通信等</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>按工作波段</strong></td>
+<td style="text-align:left">长波、中波、短波、微波、红外以及激光通信等</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>按复用方式</strong></td>
+<td style="text-align:left">频分复用（FDM）、时分复用（TDM）、码分复用（CDM）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-3-2-通信方式">1.3.2 通信方式</h3>
+<ul>
+<li><strong>按传输方向和时间划分</strong>：
+<ul>
+<li><strong>单工通信</strong>：单向传输（如广播）。</li>
+<li><strong>半双工通信</strong>：双向传输，但不能同时进行（如对讲机）。</li>
+<li><strong>全双工通信</strong>：双向且可同时进行传输（如电话）。</li>
+</ul>
+</li>
+<li><strong>按数字码元传输时序划分</strong>：
+<ul>
+<li><strong>并行传输</strong>：在并行信道上同时传输 $n$ 个比特信息。
+<ul>
+<li><em>优点</em>：节省传输时间，速度快。</li>
+<li><em>缺点</em>：需要 $n$ 条通信线路，成本高。</li>
+<li><em>应用</em>：设备之间的<strong>近距离通信</strong>（如计算机与打印机之间）。</li>
+</ul>
+</li>
+<li><strong>串行传输</strong>：数字码元序列按时间顺序一个接一个地在一条信道中传输。适合远距离传输。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="1-4-信息及其度量">1.4 信息及其度量</h2>
+<h3 id="1-4-1-基本原则">1.4.1 基本原则</h3>
+<ul>
+<li>信息量用于对不确定性进行定量描述。</li>
+<li>消息表达的事件越不可能发生（概率越小），消息中所含的信息量就越大。</li>
+<li>信息的度量方法与消息的种类、重要程度无关。</li>
+</ul>
+<h3 id="1-4-2-离散消息的信息量计算">1.4.2 离散消息的信息量计算</h3>
+<p>事件发生的概率越低, 事件发生的信息所携带的信息量就越大</p>
+<p>离散消息 $x$ 的信息量 $I$ 是其出现概率 $P(x)$ 的函数：<br>
+$$I = \log_a \frac{1}{P(x)} = -\log_a P(x)$$</p>
+<ul>
+<li>当 $a=2$ 时，单位为<strong>比特（bit）</strong>，简记为 b。</li>
+<li>当 $a=e$ 时，单位为<strong>奈特（nat）</strong>（$1\text{ nat} = 1.44\text{ b}$）。</li>
+<li>当 $a=10$ 时，单位为<strong>哈特莱（Hartley）</strong>。</li>
+</ul>
+<p><strong>等概M进制码元的信息量</strong>：<br>
+若 $M$ 进制符号等概率独立发送，每个符号蕴含的信息量相同：<br>
+$$I = \log_2 M \text{ (bit)}$$</p>
+<ul>
+<li>二进制每个码元含 $1\text{ bit}$。<em>即发生概率为$\frac1 2$</em></li>
+<li>四进制每个码元含 $2\text{ bit}$。 <em>即发生概率为$\frac 1 4$</em></li>
+</ul>
+<h3 id="1-4-3-离散信源的平均信息量（信源熵）">1.4.3 离散信源的平均信息量（信源熵）</h3>
+<ul>
+<li><strong>定义</strong>：信源中每个符号所含信息量的统计平均值。</li>
+<li><strong>公式</strong>（设离散信源有 $M$ 个统计独立的符号）：<br>
+$$H = \sum_{i=1}^{M} p(x_i) \log_2 \frac{1}{p(x_i)} = -\sum_{i=1}^M p(x_i) \log_2 p(x_i)  \text{ (b/符号)}$$</li>
+<li><strong>最大熵定理</strong>：当信源中的符号<strong>等概</strong>出现时，信源熵最大：<br>
+$$H_{\max} = \log_2 M$$</li>
+</ul>
+<h3 id="1-4-4-消息的总信息量计算">1.4.4 消息的总信息量计算</h3>
+<p>对于一条由 $m$ 个独立符号构成的消息，其总信息量 $I_{\text{总}}$ 可以通过以下两种方式计算：</p>
+<ol>
+<li><strong>利用信息相加性</strong>：将序列中各个符号产生的信息量直接累加。</li>
+<li><strong>利用熵的概念估算</strong>：<br>
+$$I_{\text{总}} = m \cdot H$$</li>
+</ol>
+<hr>
+<h2 id="1-5-通信系统性能指标">1.5 通信系统性能指标</h2>
+<p>通信系统的性能指标核心围绕<strong>有效性</strong>（传输速度）与<strong>可靠性</strong>（传输质量）展开，两者通常相互矛盾、相互关联、且可互换。</p>
+<h3 id="1-5-1-模拟通信系统指标">1.5.1 模拟通信系统指标</h3>
+<ul>
+<li><strong>有效性</strong>：传输带宽。</li>
+<li><strong>可靠性</strong>：输出信噪比。</li>
+</ul>
+<h3 id="1-5-2-数字通信系统性能指标">1.5.2 数字通信系统性能指标</h3>
+<h4 id="1、有效性指标">1、有效性指标</h4>
+<ul>
+<li><strong>码元传输速率 $R_B$（传码率、波特率）</strong>：
+<ul>
+<li><em>定义</em>：每秒传送的码元个数。</li>
+<li><em>单位</em>：波特（Baud）。</li>
+<li><em>计算</em>：若码元宽度为 $T_s$ 秒，则 $R_B = \frac{1}{T_s}$。波特率与进制数无关。</li>
+</ul>
+</li>
+<li><strong>信息传输速率 $R_b$（传信率、比特率）</strong>：
+<ul>
+<li><em>定义</em>：每秒传递的比特数（信息量）。</li>
+<li><em>单位</em>：比特/秒（bit/s, b/s, bps）。</li>
+<li><em>与码元速率的关系</em>（以信源熵 $H$ 为纽带）：<br>
+$$R_b = R_B \cdot H \text{ (b/s)}$$<br>
+$$R_b = \frac{\text{系统传输一个符号的平均信息量 (即信源熵 } H\text{)}}{\text{系统传输一个符号所消耗的平均时间 } T} = \frac{H}{T}$$<br>
+在<strong>等概</strong>传输时（$H = \log_2 M$）：<br>
+$$R_b = R_B \log_2 M$$</li>
+</ul>
+</li>
+<li><strong>频带利用率 $\eta$</strong>：将带宽 $B$ 与传输速率联系起来，定义为单位带宽内的传输速率：<br>
+$$\eta = \frac{R_B}{B} \text{ (Baud/Hz)} \quad \text{或} \quad \eta_b = \frac{R_b}{B} \text{ (b/(s}\cdot\text{Hz))}$$</li>
+</ul>
+<h4 id="2、可靠性指标（差错概率）">2、可靠性指标（差错概率）</h4>
+<ul>
+<li><strong>误码率 $P_e$</strong>：错误码元数与传输总码元数之比。<br>
+$$P_e = \frac{N_e}{N}$$</li>
+<li><strong>误信率（误比特率）$P_b$</strong>：错误比特数与传输总比特数之比。<br>
+$$P_b = \frac{I_e}{I_b}$$</li>
+<li><em>二者关系</em>：在二进制中 $P_b = P_e$；在 $M$ 进制（$M&gt;2$）中，$P_b &lt; P_e$。</li>
+</ul>
+<h2 id="名词转换">名词转换</h2>
+<table>
+<thead>
+<tr>
+<th><strong>中文名词</strong></th>
+<th><strong>英文原词</strong></th>
+<th><strong>符号表示</strong></th>
+<th><strong>核心大白话解释（快递系统比喻）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>消息</strong></td>
+<td>Message</td>
+<td>-</td>
+<td><strong>包裹本身</strong>：你要传达的文字、话语、图片。</td>
+</tr>
+<tr>
+<td><strong>信号</strong></td>
+<td>Signal</td>
+<td>$s(t)$</td>
+<td><strong>运输车</strong>：载着消息在电路或空中传输的电压、光脉冲等物理载体。</td>
+</tr>
+<tr>
+<td><strong>信息量</strong></td>
+<td>Amount of Information</td>
+<td>$I$</td>
+<td><strong>意外指数</strong>：这件事有多让你感到“震惊”或“意外”。越罕见的事情信息量越大。</td>
+</tr>
+<tr>
+<td><strong>信息熵</strong></td>
+<td>Information Entropy</td>
+<td>$H$</td>
+<td><strong>纠结指数/平均干货量</strong>：整个系统有多让人摸不透。也代表<strong>平均每个码元里装了多少比特的干货</strong>。</td>
+</tr>
+<tr>
+<td><strong>码元</strong></td>
+<td>Symbol / Code Element</td>
+<td>-</td>
+<td><strong>标准集装箱</strong>：通信波形的基本单元。一个码元就是一个箱子，几进制决定了箱子里装几比特货物。</td>
+</tr>
+<tr>
+<td><strong>码元速率 / 波特率</strong></td>
+<td>Symbol Rate / Baud Rate</td>
+<td>$R_B$</td>
+<td><strong>车速</strong>：一秒钟流水线上跑过去多少个集装箱（码元）。单位是<strong>波特 (Baud)</strong>。</td>
+</tr>
+<tr>
+<td><strong>信息速率 / 比特率</strong></td>
+<td>Data Rate / Bit Rate</td>
+<td>$R_b$</td>
+<td><strong>真正运货的速度</strong>：一秒钟系统真正传输了多少比特的干货。单位是 <strong>b/s (或 bps)</strong>。</td>
+</tr>
+<tr>
+<td><strong>确知信号</strong></td>
+<td>Deterministic Signal</td>
+<td>-</td>
+<td><strong>可预测信号</strong>：任何时刻都有确定函数值的信号（如 $\cos \omega t$），不带任何未知信息。</td>
+</tr>
+<tr>
+<td><strong>随相信号 / 随机信号</strong></td>
+<td>Random Signal</td>
+<td>-</td>
+<td><strong>不可预测信号</strong>：带有随机性、摸不准的信号（比如包含实际文字的通信信号或噪声），这才是信息的载体。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>题目中的词汇</strong></th>
+<th><strong>标准学术名词</strong></th>
+<th><strong>英文原词</strong></th>
+<th><strong>常用符号</strong></th>
+<th><strong>通俗大白话解释（快递系统比喻）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>字母 / 符号</strong></td>
+<td><strong>信源符号 / 码元</strong></td>
+<td>Source Symbol / Symbol</td>
+<td>-</td>
+<td><strong>标准集装箱</strong>：通信波形的基本单元。一个字母或符号就是一个箱子，几进制决定了箱子里能装几比特货物。</td>
+</tr>
+<tr>
+<td><strong>等可能出现</strong></td>
+<td><strong>等概率分布</strong></td>
+<td>Equal Probability</td>
+<td>$P_i = \frac{1}{M}$</td>
+<td><strong>最难猜的状态</strong>：系统里的各种包裹出现的概率完全一样。此时系统最混乱、最让人摸不透。</td>
+</tr>
+<tr>
+<td><strong>出现概率</strong></td>
+<td><strong>先验概率</strong></td>
+<td>Probability</td>
+<td>$P(x_i)$</td>
+<td><strong>中奖几率</strong>：某个特定的包裹（符号）在所有货物中出现的几率。</td>
+</tr>
+<tr>
+<td><strong>平均信息量</strong></td>
+<td><strong>信源熵</strong></td>
+<td>Information Entropy</td>
+<td>$H$</td>
+<td><strong>平均干货量 / 纠结指数</strong>：整个信源系统平均每个箱子里能装多少比特的干货。<strong>等概率出现时，平均信息量（熵）达到最大值</strong>。</td>
+</tr>
+<tr>
+<td><strong>二进制码元宽度</strong></td>
+<td><strong>码元持续时间</strong></td>
+<td>Symbol Duration</td>
+<td>$T_s$</td>
+<td><strong>单箱通行时间</strong>：传送带上运送一个二进制基础箱子所消耗的时间（如题目中的 $5\text{ ms}$）。</td>
+</tr>
+<tr>
+<td><strong>每个字母的传输时间</strong></td>
+<td><strong>符号周期 / 字符长度</strong></td>
+<td>Symbol Period</td>
+<td>$T$</td>
+<td><strong>大箱总耗时</strong>：一个复合包裹（由多个小二进制箱子组合而成）通过流水线所需的总时间。</td>
+</tr>
+<tr>
+<td><strong>平均信息速率</strong></td>
+<td><strong>信息传输速率 / 比特率</strong></td>
+<td>Bit Rate / Data Rate</td>
+<td>$R_b$</td>
+<td><strong>真正运货的速度</strong>：通信流水线每秒钟真正传输了多少比特（bit）的“干货”。单位是 <strong>b/s (或 bps)</strong>。</td>
+</tr>
+<tr>
+<td><strong>传送的信息量</strong></td>
+<td><strong>总信息量</strong></td>
+<td>Total Information</td>
+<td>$I_{\text{总}}$</td>
+<td><strong>总运货吨位</strong>：在一段特定的时间里（比如 $1\text{ h}$ 内），整个系统一共运送了多少比特（bit）的干货。</td>
+</tr>
+</tbody>
+</table>
+<h1>第二章 确知信号</h1>
+<h2 id="2-1-确知信号的类型">2.1 确知信号的类型</h2>
+<ul>
+<li><strong>确知信号的定义</strong>：在定义域内的任意时刻都有确定的函数值。反之则为随机信号或不确知信号。</li>
+<li><strong>按周期重复性分类</strong>：
+<ul>
+<li><strong>周期信号</strong>：每隔一定的时间间隔按相同规律重复，且无始无终。满足 $s(t) = s(t + T_0)$ 的最小 $T_0 &gt; 0$ 称为信号的<strong>基波周期</strong>。</li>
+<li><strong>非周期信号</strong>：不具备周期重复性的信号。</li>
+</ul>
+</li>
+<li><strong>按信号能量是否有限分类</strong>：
+<ul>
+<li><strong>能量信号</strong>：若信号的能量 $E$ 满足 $0 &lt; E &lt; \infty$ 且其平均功率 $P \to 0$，则称其为能量（有限）信号（如单个矩形脉冲）。能量计算公式: $$E = \int_{-\infty}^\infty |{f(t)|^2 dt}$$</li>
+<li><strong>功率信号</strong>：若信号的平均功率 $P$ 满足 $0 &lt; P &lt; \infty$ 且其能量 $E \to \infty$，则称其为功率（有限）信号（如直流信号、周期信号 and 随机信号）。功率计算公式: $$P = \lim_{T\to\infty} \frac 1 {2T}\int_{-T}^T|f(t)|^2 dt$$</li>
+<li><em>注意</em>：一个信号不可能既是能量信号又是功率信号。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-2-确知信号的频域性质">2.2 确知信号的频域性质</h2>
+<p>信号的频域性质反映了信号各频率分量的分布情况，涉及占用的频带宽度、滤波性能等，是信号最重要、最本质的性质之一。</p>
+<h3 id="2-2-1-功率信号的频谱（周期信号）">2.2.1 功率信号的频谱（周期信号）</h3>
+<p>对于周期为 $T_0$ 的功率信号 $s(t)$，可展开为指数型傅里叶级数：<br>
+$$s(t) = \sum_{n=-\infty}^{\infty} C_n e^{j 2 \pi n f_0 t}$$<br>
+其中，傅里叶级数系数（又称<strong>双边谱</strong>）为：<br>
+$$C_n = C(n f_0) = \frac{1}{T_0} \int_{-T_0/2}^{T_0/2} s(t) e^{-j 2 \pi n f_0 t} dt$$</p>
+<ul>
+<li>$f_0 = 1/T_0$ 称为信号的<strong>基频</strong>， $n f_0$ 称为信号的**$n$次谐波频率**。</li>
+<li>$|C_n|$ 随频率变化的特性称为<strong>幅度谱</strong>（其值为单边谱振幅的一半）。</li>
+<li>$\theta_n$ 随频率变化的特性称为<strong>相位谱</strong>。</li>
+<li>当 $n=0$ 时，$C_0$ 表示信号的时间平均值，即<strong>直流分量</strong>。</li>
+<li><strong>实信号频谱的性质</strong>：对于物理可实现的实信号，正频率部分和负频率部分间存在<strong>复数共轭关系</strong>，即 $|C_n|$ 满足<strong>模偶对称</strong>，$\theta_n$ 满足<strong>相位奇对称</strong>。</li>
+<li>若 $s(t)$ 是<strong>实偶信号</strong>，则 $C_n$ 为<strong>实函数</strong>；若 $s(t)$ 不是偶信号，则 $C_n$ 为<strong>复函数</strong>。</li>
+</ul>
+<h3 id="2-2-2-能量信号的频谱密度">2.2.2 能量信号的频谱密度</h3>
+<ul>
+<li><strong>定义</strong>：能量信号 $s(t)$ 的傅里叶变换即为频谱密度 $S(f)$：<br>
+$$S(f) = \int_{-\infty}^{\infty} s(t) e^{-j 2 \pi f t} dt$$</li>
+<li><strong>$S(f)$ 与 $C_n$ 的主要区别</strong>：$S(f)$ 是连续谱，单位是 $\text{V/Hz}$；$C_n$ 是离散谱，单位是 $\text{V}$。</li>
+<li><strong>重要物理特例</strong>：
+<ul>
+<li><strong>单位门函数（矩形脉冲）</strong>：其频谱密度为抽样函数（$\text{Sa}$ 函数）形式，且矩形脉冲的带宽等于其脉冲持续时间 $\tau$ 的倒数，即 $\frac{1}{\tau}\text{ Hz}$。</li>
+<li><strong>单位冲激函数（$\delta$ 函数）</strong>：频谱密度 $S(f) = 1$（全频域均匀分布）。</li>
+<li><em>冲激函数的引入</em>：利用冲激函数，可以把频谱密度的概念推广到功率信号上（例如：无限长余弦波 $\cos(2\pi f_0 t)$ 的频谱密度为 $\frac{1}{2}[\delta(f-f_0) + \delta(f+f_0)]$）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-3-能量谱密度与功率谱密度">2.2.3 能量谱密度与功率谱密度</h3>
+<ul>
+<li><strong>能量谱密度 $G(f)$</strong>：
+<ul>
+<li><em>定义</em>：$G(f) = |S(f)|^2$，用来描述能量信号的能量在频域上的分布情况。</li>
+<li><em>Parseval定理</em>：信号的总能量既可以在时域求解，也可以在频域对能量谱密度积分求解。</li>
+</ul>
+</li>
+<li><strong>功率谱密度 $P(f)$</strong>：
+<ul>
+<li><em>定义</em>：用来描述功率信号的功率在频域上的分布情况。</li>
+<li><em>周期信号的功率谱密度</em>：由各次谐波功率的冲激序列组成：<br>
+$$P(f) = \sum_{n=-\infty}^{\infty} |C_n|^2 \delta(f - n f_0)$$</li>
+<li>其中，$|C_n|^2$ 为第 $n$ 次谐波的功率。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-3-确知信号的时域性质">2.3 确知信号的时域性质</h2>
+<p>确知信号的时域性质可由自相关函数或互相关函数来描述。</p>
+<h3 id="2-3-1-自相关函数">2.3.1 自相关函数</h3>
+<p><strong>定义</strong>：同一个信号 $s(t)$，在<strong>不同的时刻</strong>（相隔时间差 $\tau$）跟<strong>它自己</strong>相比，到底有多相似 。</p>
+<h4 id="1、能量信号的自相关函数">1、能量信号的自相关函数</h4>
+<ul>
+<li><strong>定义</strong>：$R(\tau) = \int_{-\infty}^{\infty} s(t) s(t + \tau) dt$</li>
+<li><strong>性质</strong>：
+<ul>
+<li>与时间 $t$ 无关，只与时间差 $\tau$ 有关。</li>
+<li>当 $\tau = 0$ 时，$R(0) = E$（等于信号的总能量）。</li>
+<li>关于 $\tau$ 是<strong>偶函数</strong>：$R(\tau) = R(-\tau)$。</li>
+<li>自相关函数 $R(\tau)$ 和其能量谱密度 $|S(f)|^2$ 是一对傅里叶变换对。</li>
+</ul>
+</li>
+</ul>
+<h4 id="2、功率信号的自相关函数">2、功率信号的自相关函数</h4>
+<ul>
+<li><strong>定义</strong>：$R(\tau) = \lim_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} s(t) s(t + \tau) dt$</li>
+<li><strong>性质</strong>：
+<ul>
+<li>当 $\tau = 0$ 时，$R(0) = P$（等于信号的平均功率）。</li>
+<li>同样满足关于 $\tau$ 的偶对称性。</li>
+<li>功率信号的自相关函数 $R(\tau)$ 和其功率谱密度 $P(f)$ 是一对傅里叶变换对。</li>
+<li><em>典型结论</em>：周期性余弦信号 $s(t) = A\cos(\omega_0 t + \theta)$ 的自相关函数为 $R(\tau) = \frac{A^2}{2}\cos\omega_0 \tau$，其与初始相位 $\theta$ 无关。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-2-互相关函数">2.3.2 互相关函数</h3>
+<p><strong>定义</strong>：<strong>两个完全不同</strong>的信号 $s_1(t)$ 和 $s_2(t)$，在相隔时间差 $\tau$ 时，彼此之间有多相似 。</p>
+<h4 id="1、能量信号的互相关函数">1、能量信号的互相关函数</h4>
+<ul>
+<li><strong>定义</strong>：$R_{12}(\tau) = \int_{-\infty}^{\infty} s_1(t) s_2(t + \tau) dt$</li>
+<li><strong>性质</strong>：
+<ul>
+<li>只与时间差 $\tau$ 有关。</li>
+<li>与两个信号相乘的前后次序有关，满足：$R_{12}(\tau) = R_{21}(-\tau)$。</li>
+<li>互相关函数 $R_{12}(\tau)$ 和<strong>互能量谱密度</strong> $S_{12}(f)$ 是一对傅里叶变换对。</li>
+</ul>
+</li>
+</ul>
+<h4 id="2、功率信号的互相关函数">2、功率信号的互相关函数</h4>
+<ul>
+<li><strong>定义</strong>：$R_{12}(\tau) = \lim_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} s_1(t) s_2(t + \tau) dt$</li>
+<li><strong>性质</strong>：
+<ul>
+<li>若两个周期性功率信号的周期相同，其互相关函数可在单个周期内积分求解。</li>
+<li>相乘次序改变时满足：$R_{12}(\tau) = R_{21}(-\tau)$。</li>
+<li>互相关函数 $R_{12}(\tau)$ 和<strong>互功率谱</strong> $C_{12}(f)$ 是一对傅里叶变换对。</li>
+</ul>
+</li>
+</ul>
+<h1>第三章 随机过程</h1>
+<h2 id="3-1-随机过程的基本概念">3.1 随机过程的基本概念</h2>
+<p>随机过程是随机变量的集合, 多个随机变量构成了随机过程; 对随机过程按时间进行记录, 得到的时间函数就是样本函数. 可以理解为关于时间和随机变量的一个二元函数.</p>
+<h3 id="1-随机过程的特点与定义">1. 随机过程的特点与定义</h3>
+<ul>
+<li><strong>双重特点</strong>：随机过程兼有随机变量和时间函数的特点。</li>
+<li><strong>定义方式</strong>：随机过程可以从两个角度进行定义：
+<ol>
+<li>它是所有样本函数 $\xi_i(t)$ 的集合。</li>
+<li>它是任意时刻 $t_i$ 的随机变量 $\xi(t_i)$ 的集合。</li>
+</ol>
+</li>
+<li><strong>特性描述</strong>：随机过程的统计特性主要通过分布函数和数字特征来描述。</li>
+</ul>
+<h3 id="2-分布函数与概率密度函数">2. 分布函数与概率密度函数</h3>
+<ul>
+<li>一维分布函数: $F_1(x_1, t_1) = P[\xi(t_1) \le x_1]$</li>
+</ul>
+<ul>
+<li><strong>多维描述</strong>：包括一维、二维及 $n$ 维分布函数和概率密度函数。</li>
+<li><strong>统计特性描述</strong>：分布函数用于描述孤立时刻的统计特性。其中，维数 $n$ 越大，对随机过程统计特性的描述就越充分。</li>
+<li><strong>$n$ 维分布函数定义</strong>：$F_n(x_1, x_2, …, x_n; t_1, t_2, …, t_n) = P{ \xi(t_1) \le x_1, \xi(t_2) \le x_2, …, \xi(t_n) \le x_n }$。</li>
+</ul>
+<h3 id="3-随机过程的数字特征">3. 随机过程的数字特征</h3>
+<h4 id="1-均值-a-t-：摆动中心（在哪里晃悠">1. 均值 $a(t)$：摆动中心（在哪里晃悠)</h4>
+<p>$$E[\xi(t)] = \int _{-\infty}^\infty xf_1(x, t) dx$$</p>
+<ul>
+<li><strong>数学含义</strong>：$a(t) = E[\xi(t)]$，它是所有可能出现的样本函数在 $t$ 时刻的统计平均值。</li>
+<li><strong>它是如何表示随机过程的</strong>：<br>
+均值代表了随机过程的<strong>摆动中心</strong>或<strong>整体趋势</strong>。如果把随机过程看作是一群在空中飞行的飞鸟，均值就是这群鸟整体的“飞行路线”（红色的轴线）。
+<ul>
+<li>如果均值 $a(t) = 0$（比如通信里的热噪声），说明这个随机过程上下对称，没有直流分量，整体上是在 0 电平上下晃荡。</li>
+<li>如果均值是个随时间变化的函数，说明该过程带有某种确定性的方向或趋势。</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-方差-D-xi-t-：偏离程度（晃悠得有多凶）">2. 方差 $D[\xi(t)]$：偏离程度（晃悠得有多凶）</h4>
+<p>$$D[\xi(t)] = E{[\xi(t)-a(t)]^2} = E[\xi^2(t)] - a^2(t)$$</p>
+<ul>
+<li><strong>数学含义</strong>：当均值为 0 时，方差直接等于信号的平均功率 $\sigma^2(t) = E[\xi^2(t)]$。</li>
+<li><strong>它是如何表示随机过程的</strong>：<br>
+方差描述的是随机过程在某个时刻<strong>偏离均值的剧烈程度</strong>（即波动强度）。
+<ul>
+<li>如果方差很小，说明所有的样本曲线都紧紧地包裹在均值线周围，行为比较规律、温和。</li>
+<li>如果方差很大，说明曲线散得很开，会出现大起大落的剧烈波动。</li>
+<li>在物理和通信上，方差代表了交流信号的<strong>交流功率</strong>。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-自相关函数-R-t-1-t-2-：同一过程的关联度（前后的记忆力）">3. 自相关函数 $R(t_1, t_2)$：同一过程的关联度（前后的记忆力）</h4>
+<p>期望和方差反映的是孤立时刻的数学特征</p>
+<ul>
+<li><strong>数学含义</strong>：$R(t_1, t_2) = E[\xi(t_1)\xi(t_2)]$，描述的是同一个随机过程在 $t_1$ 和 $t_2$ 两个不同时刻的相关程度。</li>
+<li><strong>它是如何表示随机过程的</strong><br>
+它表示了这个随机过程<strong>自身的记忆力</strong>或者<strong>变化的快慢</strong>。
+<ul>
+<li><strong>如果相关性很强</strong>（$R$ 的值很大）：说明 $t_1$ 时刻发生的事情，会强烈地暗示、影响 $t_2$ 时刻的状态。反映在图形上，就是曲线变化得非常平缓、平滑，不会出现突变。</li>
+<li><strong>如果相关性极弱</strong>（$R$ 趋近于 0）：说明两个时刻完全是各过各的，互不影响。反映在图形上，就是曲线长得像“锯齿”一样，波动极快、极其陡峭。</li>
+<li><strong>白噪声的极端情况</strong>：通信中理想的“白噪声”，其自相关函数只在 $\tau=0$（同一个时刻）有值，只要时间一错开相关性立刻变 0，这说明白噪声完全没有记忆，下一秒的波动和上一秒毫无关系。</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-自协方差函数-B-t-1-t-2">4. 自协方差函数 $B(t_1, t_2)$</h4>
+<p>$$B(t_1, t_2) = E{[\xi(t_1)-a(t_1)][\xi(t_2)-a(t_2)]}$$<br>
+$$B(t_1, t_2) = R(t_1, t_2)-a(t_1)a(t_2)$$</p>
+<h4 id="4-互相关函数-R-xi-eta-t-1-t-2-：两个过程的绑定度（你俩有多默契）">4. 互相关函数 $R_{\xi\eta}(t_1, t_2)$：两个过程的绑定度（你俩有多默契）</h4>
+<ul>
+<li><strong>数学含义</strong>：$R_{\xi\eta}(t_1, t_2) = E[\xi(t_1)\eta(t_2)]$，描述的是两个不同的随机过程（比如信号 $\xi$ 和噪声 $\eta$）之间的关联程度。</li>
+<li><strong>它是如何表示随机过程的</strong><br>
+它用来表示两组相互独立发展的事情，在时间推移中是否存在某种<strong>共振、默契或因果关系</strong>。
+<ul>
+<li><strong>应用场景</strong>：在雷达探测里，雷达发射出去一个随机雷达波（过程 $\xi$），隔了一段时间收到回波（过程 $\eta$）。我们用互相关函数去计算它们，当互相关函数在某一个时间差 $\tau$ 出现一个巨大的峰值时，就说明收到的回波和发射的波高度重合，这个时间差 $\tau$ 就是雷达波在空中飞行的往返时间，从而就能测出目标的距离。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3-2-平稳随机过程">3.2 平稳随机过程</h2>
+<p>统计规律非常稳定的随机过程, 分为狭义和广义</p>
+<h3 id="1-平稳性的定义与分类">1. 平稳性的定义与分类</h3>
+<ul>
+<li><strong>狭义平稳（严平稳）</strong>：随机过程的统计特性与时间起点无关。其一维分布与时间 $t$ 无关，二维分布只与时间间隔 $\tau$ 有关。</li>
+<li><strong>广义平稳（宽平稳）</strong>：必须同时满足以下两个条件：
+<ol>
+<li>均值与时间 $t$ 无关，即 $a(t) = a$（常数）。</li>
+<li>相关函数仅与时间间隔 $\tau$ 有关，即 $R(t_1, t_1 + \tau) = R(\tau)$。</li>
+</ol>
+</li>
+<li><strong>两者关系</strong>：狭义平稳过程必然是广义平稳过程，但广义平稳过程未必是狭义平稳过程。</li>
+</ul>
+<h3 id="2-各态历经性（遍历性）">2. 各态历经性（遍历性）</h3>
+<p>“个体的长时间历史行为，可以完美代表整个群体的瞬间统计特征。”</p>
+<ul>
+<li><strong>核心含义</strong>：任一样本经历了平稳过程的所有可能状态。</li>
+<li><strong>重大物理意义</strong>：使得“统计平均值 = 时间平均值”。在实际计算中，可以用任意单一样本的时间平均替代统计平均，从而使计算大为简化。</li>
+<li><strong>与平稳的关系</strong>：遍历过程必然是平稳过程，但平稳过程未必具有遍历性。</li>
+<li><strong>遍历性判断三步法</strong>：
+<ol>
+<li><strong>第1步</strong>：判断是否广义平稳（均值为常数，自相关函数只与时间间隔 $\tau$ 有关）。</li>
+<li><strong>第2步</strong>：求样本的时间平均值。</li>
+<li><strong>第3步</strong>：比较统计平均值和时间平均值，若两者相等（$a = \bar{a}$ 且 $R(\tau) = \overline{R(\tau)}$），则该过程具备各态历经性。</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-平稳过程自相关函数的性质">3. 平稳过程自相关函数的性质</h3>
+<ul>
+<li><strong>物理意义对应</strong>：
+<ul>
+<li>$R(0)$ 对应过程的<strong>平均功率</strong>。</li>
+<li>当均值为 $a$ 时，$a^2$ 对应<strong>直流功率</strong>。</li>
+<li>$\sigma^2$ 对应<strong>交流功率</strong>（即方差）。</li>
+</ul>
+</li>
+<li><strong>数学特性</strong>：自相关函数具有偶函数特性和上界特性。</li>
+</ul>
+<h3 id="4-功率谱密度（PSD）">4. 功率谱密度（PSD）</h3>
+<ul>
+<li><strong>维纳-辛钦定理</strong>：平稳过程的功率谱密度与自相关函数是一对傅里叶变换。</li>
+<li><strong>PSD 的性质</strong>：功率谱密度是偶函数，且具有非负性。</li>
+<li><strong>特殊关联</strong>：当 $\tau = 0$ 时，有 $R(0) = \int P(f) df$，即自相关函数在零点的取值等于功率谱密度在整个频率轴上的积分。</li>
+<li><strong>遍历过程特有规律</strong>：遍历过程任一样本的功率谱密度等于该随机过程的功率谱密度。</li>
+</ul>
+<hr>
+<h2 id="3-3-高斯随机过程">3.3 高斯随机过程</h2>
+<h3 id="1-定义与重要性质">1. 定义与重要性质</h3>
+<ul>
+<li><strong>定义</strong>：若随机过程的任意 $n$ 维（$n=1,2,…$）分布都服从正态分布，则称其为高斯过程。</li>
+<li><strong>重要性质</strong>：
+<ol>
+<li>若高斯过程满足广义平稳，则它也必然满足狭义平稳。</li>
+<li>高斯随机变量之间若互不相关，则它们在统计上必然独立。</li>
+<li>若干个高斯过程的代数和仍是高斯型过程。</li>
+<li>高斯过程经过线性变换后仍是高斯过程。</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-高斯随机变量及其分布函数">2. 高斯随机变量及其分布函数</h3>
+<ul>
+<li><strong>概率密度函数</strong>：一维概率密度函数记为 $N(a, \sigma^2)$。其曲线关于直线 $x=a$ 对称，其中 $a$ 是分布中心，$\sigma$ 决定数据的集中程度。</li>
+<li><strong>误差函数</strong>：引入误差函数 $\text{erf}(x)$（自变量的递增函数）与补误差函数 $\text{erfc}(x)$（自变量的递减函数）进行描述。</li>
+<li><strong>应用意义</strong>：正态分布函数 $F(b) = P(x \le b)$ 可以通过误差函数表达，其简明特性有助于分析通信系统的抗噪声性能。</li>
+</ul>
+<hr>
+<h2 id="3-4-平稳随机过程通过线性系统">3.4 平稳随机过程通过线性系统</h2>
+<ul>
+<li><strong>系统响应表达式</strong>：若输入有界且系统是物理可实现的，输出过程 $\xi_o(t)$ 为输入过程 $\xi_i(t)$ 与系统冲激响应 $h(t)$ 的卷积。</li>
+<li><strong>输入与输出的统计特性对应关系</strong>：
+<ul>
+<li><strong>概率分布</strong>：若输入是平稳、高斯过程，则输出也必然是平稳、高斯过程。</li>
+<li><strong>均值</strong>：若输入均值为常数，输出均值也为常数，其数值与线性系统的直流增益有关。</li>
+<li><strong>功率谱密度与自相关函数</strong>：输出的相应频谱特性与系统的功率增益有关。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3-5-窄带随机过程">3.5 窄带随机过程</h2>
+<h3 id="1-窄带条件与波形特点">1. 窄带条件与波形特点</h3>
+<ul>
+<li><strong>窄带信号定义</strong>：随机信号或噪声通过窄带系统后即形成窄带随机过程。其窄带条件满足：带宽远小于中心频率，即 $\Delta f \ll f_c$。</li>
+<li><strong>样本波形特点</strong>：可以将其视为一个包络缓慢变化的正弦波。</li>
+</ul>
+<h3 id="2-窄带过程的表达式">2. 窄带过程的表达式</h3>
+<ul>
+<li><strong>包络相位形式</strong>：由随机包络 $a_\xi(t)$ 和随机相位 $\phi_\xi(t)$ 组成。</li>
+<li><strong>同相正交形式</strong>：由同相分量 $\xi_c(t)$ 和正交分量 $\xi_s(t)$ 组成。</li>
+</ul>
+<h3 id="3-组件的统计特性结论">3. 组件的统计特性结论</h3>
+<ul>
+<li><strong>结论1（同相与正交分量）</strong>：一个均值为 0、方差为 $\sigma^2$ 的平稳高斯窄带过程，其同相分量 $\xi_c(t)$ 和正交分量 $\xi_s(t)$ 也是平稳高斯过程。它们均值为 0，方差和平均功率相同，且互相不相关（因属于高斯型，故也是统计独立的）。</li>
+<li><strong>结论2（包络与相位）</strong>：一个均值为 0、方差为 $\sigma^2$ 的平稳高斯窄带过程，其包络服从<strong>瑞利分布</strong>，相位服从<strong>均匀分布</strong>，并且包络与相位在统计上是相互独立的。</li>
+</ul>
+<hr>
+<h2 id="3-6-正弦波加窄带高斯过程">3.6 正弦波加窄带高斯过程</h2>
+<ul>
+<li><strong>信号合成</strong>：由一个确定性正弦波（振幅为常数，相位在 $(0, 2\pi)$ 上均匀分布）与一个窄带高斯噪声（均值为 0）合成。</li>
+<li><strong>统计特性变化</strong>：合成信号的包络服从<strong>莱斯分布</strong>；而由于确定性正弦信号的加入，其合成相位不再服从均匀分布。</li>
+</ul>
+<hr>
+<h2 id="3-7-高斯白噪声和带限白噪声">3.7 高斯白噪声和带限白噪声</h2>
+<ul>
+<li><strong>1. 白噪声（理想宽带过程）</strong>：其功率谱密度在整个频率范围内均匀分布，其值为常数 $n_0$。白噪声仅在 $\tau = 0$（即同一时刻）时才具有相关性。</li>
+<li><strong>2. 高斯白噪声</strong>：指概率分布服从高斯分布的白噪声。高斯白噪声在任意两个不同时刻上的取值之间，不仅是互不相关的，而且在统计上是完全独立的。</li>
+<li><strong>3. 带限白噪声</strong>：白噪声通过有限带宽的信道或滤波器后的情形。如果在限带的同时满足窄带条件（$B \ll f_c$），则演变为窄带高斯白噪声。</li>
+</ul>
+<h1>第四章 信道</h1>
+<h2 id="4-1-无线信道">4.1 无线信道</h2>
+<h3 id="1-信道的定义与分类">1. 信道的定义与分类</h3>
+<ul>
+<li><strong>狭义信道</strong>：仅指具体的分集传输媒质（如有线线路、无线空间）。</li>
+<li><strong>广义信道</strong>：包含传输媒质及有关的变换装置（如发送/接收设备、调制/解调器、编码/译码器等）。
+<ul>
+<li><strong>调制信道</strong>：研究调制与解调问题之间的范围，其核心是研究信号通过时的连续波形变化。</li>
+<li><strong>编码信道</strong>：研究编码与译码问题之间的范围，其核心是研究数字序列的传输变换规律。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-地球大气层的结构">2. 地球大气层的结构</h3>
+<ul>
+<li><strong>对流层</strong>：约 0 ~ 10 km，大气的低层，集中了大部分水汽，气象多变。</li>
+<li><strong>平流层</strong>：约 10 ~ 60 km，空气稀薄且稳定。</li>
+<li><strong>电离层</strong>：约 60 ~ 400 km，受太阳辐射电离，能反射特定频率的电磁波。</li>
+</ul>
+<h3 id="3-电磁波的传播方式">3. 电磁波的传播方式</h3>
+<ul>
+<li><strong>地波 (Ground Wave)</strong>：
+<ul>
+<li><strong>频率范围</strong>：&lt; 2 MHz。</li>
+<li><strong>传播特性</strong>：沿地球表面绕射传播，具有较强的绕射能力。</li>
+<li><strong>传播距离</strong>：数百至数千米。</li>
+<li><strong>主要用途</strong>：中波、长波低频通信，AM 广播。</li>
+</ul>
+</li>
+<li><strong>天波 (Sky Wave)</strong>：
+<ul>
+<li><strong>频率范围</strong>：2 ~ 30 MHz。</li>
+<li><strong>传播特性</strong>：通过电离层与地面之间的来回反射（折射）进行传播。</li>
+<li><strong>传播距离</strong>：一跳的距离通常小于 4000 km，通过多跳可实现全球远距离通信。</li>
+<li><strong>主要用途</strong>：远程短波通信。</li>
+</ul>
+</li>
+<li><strong>视线传播 (Line of Sight, LOS)</strong>：
+<ul>
+<li><strong>频率范围</strong>：&gt; 30 MHz（超短波及微波）。</li>
+<li><strong>传播特性</strong>：类似光线沿直线直线传播，能够直接穿透电离层，不被其反射。</li>
+<li><strong>传播距离</strong>：受限于地球曲率，视距距离与收发天线架设高度密切相关。最远视距公式为 $D \approx 4.12(\sqrt{h_1} + \sqrt{h_2})$ km。若天线高 40 m，最远距离约 44.7 km。</li>
+<li><strong>增大视距传播距离的途径</strong>：
+<ol>
+<li><strong>微波中继（微波接力）</strong>：两点间传输距离一般为 30 ~ 50 km，远距离通信需建立多个中继站。其优点是容量大、投资少、维护方便、传输质量稳定。</li>
+<li><strong>卫星中继</strong>：利用静止卫星、移动卫星进行高空接力通信。优点是通信容量大、覆盖范围广、传输距离远；缺点是时延大、造价高。</li>
+<li><strong>平流层通信</strong>：利用留空在平流层的飞艇或无人机作为中继基站。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>散射通信</strong>：
+<ul>
+<li><strong>对流层散射</strong>：频率 100 ~ 4000 MHz，利用对流层大气不均匀性产生的散射，距离小于 600 km。</li>
+<li><strong>电离层散射</strong>：频率 30 ~ 60 MHz，利用电离层不均匀性产生的散射，距离可达 1000 km 以上。</li>
+<li><strong>流星余迹散射</strong>：频率 30 ~ 100 MHz，利用流星进入大气层烧毁时形成的微细电离流星余迹。高度约 80 ~ 120 km，余迹存留时间通常小于 1 秒至几分钟，传播距离在 1000 km 以上。其特点是：低速存储、高速突发、断续传输。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="4-2-有线信道">4.2 有线信道</h2>
+<h3 id="1-明线">1. 明线</h3>
+<ul>
+<li><strong>结构</strong>：架设在电线杆上的平行裸导线。</li>
+<li><strong>缺点</strong>：传输衰减大、传输距离短、邻道间存在严重的串话干扰。</li>
+</ul>
+<h3 id="2-对称电缆（双绞线-Twisted-Pair）">2. 对称电缆（双绞线 Twisted Pair）</h3>
+<ul>
+<li><strong>结构特点</strong>：两条绝缘铜导线按一定规律呈纽绞状，以减小各线对之间的电磁相互干扰。</li>
+<li><strong>主要分类</strong>：
+<ul>
+<li><strong>屏蔽双绞线 (STP)</strong>：外包裹金属屏蔽层，可显著减少噪声和外界干扰。</li>
+<li><strong>非屏蔽双绞线 (UTP)</strong>：没有屏蔽层，价格便宜、易弯曲、易安装。</li>
+</ul>
+</li>
+<li><strong>典型应用</strong>：日常电话线路、局域网（网线）及综合布线工程。</li>
+</ul>
+<h3 id="3-同轴电缆">3. 同轴电缆</h3>
+<ul>
+<li><strong>结构特点</strong>：由同轴心的两个导体组成，内部为内芯（金属导线），外部为外导体（金属编织网），两者之间充有绝缘介质。</li>
+<li><strong>优缺点</strong>：相比双绞线，抗电磁干扰能力强、带宽更宽、速率更高；但成本较高。在现代干线中正在被光缆逐步代替。</li>
+<li><strong>常见形式</strong>：
+<ul>
+<li><strong>宽带（射频）同轴电缆</strong>：特性阻抗为 75 Ω，主要用于传输模拟信号，多用于有线电视 (CATV) 系统，传输距离可达几十千米。</li>
+<li><strong>基带同轴电缆</strong>：特性阻抗为 50 Ω，主要用于数字基带传输，速率可达 10 Mb/s，传输距离小于几千米。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-光纤-Optical-Fiber">4. 光纤 (Optical Fiber)</h3>
+<ul>
+<li><strong>基本结构</strong>：由高折射率的“纤芯”和低折射率的“包层”组成的玻璃细丝。</li>
+<li><strong>主要分类</strong>：
+<ul>
+<li><strong>按折射率分布</strong>：阶跃型光纤、梯度型（渐变型）光纤。</li>
+<li><strong>按传输模式数量</strong>：多模光纤（色散大、带宽窄、传输距离短）、单模光纤（单模阶跃折射率光纤，无模式色散、带宽极宽、传输距离极远）。</li>
+</ul>
+</li>
+<li><strong>核心优点</strong>：
+<ol>
+<li>传输频带宽、通信容量极大。</li>
+<li>传输衰减极小（典型值 $&lt; 0.2\text{ dB/km}$），无中继传输距离可达几百公里。</li>
+<li>抗电磁干扰能力强、传输质量好、防窃听、耐腐蚀。</li>
+<li>体积小、重量轻、节省有色金属、环保。</li>
+</ol>
+</li>
+<li><strong>主要缺点</strong>：质地易碎、接口连接技术和器件昂贵、安装和维护需要专门的专业技能。</li>
+<li><strong>典型应用</strong>：国家长途电话网、有线电视网等骨干干线线路。</li>
+</ul>
+<hr>
+<h2 id="4-3-信道数学模型">4.3 信道数学模型</h2>
+<h3 id="1-调制信道模型（连续信道）">1. 调制信道模型（连续信道）</h3>
+<ul>
+<li><strong>广义共性</strong>：满足线性叠加原理；对信号表现为固定或时变的延迟和损耗；在没有信号输入时，输出端仍有噪声输出。</li>
+<li><strong>数学模型公式</strong>：$r(t) = C(\omega) \cdot s_i(t) + n(t)$或$e_o(t) = f[e_i(t)] + n(t)$
+<ul>
+<li>$s_i(t)/e_i(t)$：信道输入端信号电压。</li>
+<li>$r(t)/e_o(t)$：信道输出端信号电压。</li>
+<li>$C(\omega)$：信道的乘性传输特性（时变或时不变网络）。</li>
+<li>$n(t)$：信道的加性噪声电压。</li>
+</ul>
+</li>
+<li><strong>基于时变特性的信道分类</strong>：
+<ul>
+<li><strong>恒参信道</strong>：乘性特性 $C(\omega)$ 基本不随时间变化，参数稳定。当 $C(\omega)$ 为常数（通常取1）时，演变为<strong>加性高斯白噪声信道模型</strong>：$r(t) = s_i(t) + n(t)$。</li>
+<li><strong>随参信道</strong>：乘性特性 $C(\omega)$ 随时间随机快变。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-编码信道模型（离散信道）">2. 编码信道模型（离散信道）</h3>
+<ul>
+<li><strong>数字描述方法</strong>：利用数字序列的<strong>转移概率</strong>来完全描述信道特性。</li>
+<li><strong>二进制无记忆编码信道模型</strong>：
+<ul>
+<li>发送 0 或 1，接收 0 或 1。</li>
+<li><strong>正确转移概率</strong>：$P(0/0)$ 和 $P(1/1)$。</li>
+<li><strong>错误转移概率（错码率）</strong>：$P(1/0)$ 和 $P(0/1)$。</li>
+<li>满足：$P(0/0) + P(1/0) = 1$ 且 $P(1/1) + P(0/1) = 1$。</li>
+</ul>
+</li>
+<li><strong>四进制无记忆编码信道模型</strong>：发送和接收均有 0, 1, 2, 3 四种离散状态。</li>
+</ul>
+<hr>
+<h2 id="4-4-恒参-随参信道特性对信号传输的影响">4.4 恒参/随参信道特性对信号传输的影响</h2>
+<h3 id="1-恒参信道对信号传输的影响">1. 恒参信道对信号传输的影响</h3>
+<ul>
+<li><strong>物理特点</strong>：乘性传输特性不随时间变化或随时间极度缓慢地变化（如有线信道、卫星信道等）。</li>
+<li><strong>理想恒参信道条件（无失真传输）</strong>：
+<ul>
+<li><strong>幅频特性</strong>：$|H(\omega)| = K$（常数衰减因子，对各频率成分等增益衰减）。</li>
+<li><strong>相频特性</strong>：$\varphi(\omega) = \omega t_d$（与频率成正比的线性相位）。</li>
+<li><strong>群延迟特性</strong>：$\tau(\omega) = \frac{d\varphi(\omega)}{d\omega} = t_d$（各频率成分的时延固定相同）。</li>
+<li><strong>此时输出</strong>：$r(t) = K \cdot s(t - t_d)$，信号只有固定的迟延和幅度的衰减，波形完全不产生失真。</li>
+</ul>
+</li>
+<li><strong>非理想恒参信道引起的失真</strong>：
+<ul>
+<li><strong>幅频失真</strong>：信道对不同频率分量的衰减不一致。
+<ul>
+<li><strong>影响</strong>：对模拟信号造成波形失真导致信噪比下降；对数字信号产生<strong>码间串扰</strong>导致误码率增大。</li>
+</ul>
+</li>
+<li><strong>相频失真与群延迟失真</strong>：不同频率成分通过信道后的时延（群延迟）各不相同。
+<ul>
+<li><strong>影响</strong>：由于人耳对相位不敏感，相频失真对语音信号影响不大，但对视频/图像信号影响极大（导致重影、模糊）；对数字信号则会产生严重的<strong>码间串扰</strong>，导致误码率严重恶化。</li>
+</ul>
+</li>
+<li><strong>克服失真的主要措施</strong>：在接收端加入<strong>均衡器</strong>进行幅度与相位特性的补偿。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-随参信道对信号传输的影响">2. 随参信道对信号传输的影响</h3>
+<ul>
+<li><strong>物理特点</strong>：传输特性随时间发生随机的、快速的变化（如陆地移动通信信道、短波电离层反射信道等）。</li>
+<li><strong>三大核心特征描述</strong>：衰减随时间变化、时延随时间变化、存在<strong>多径传播</strong>。</li>
+<li><strong>多径效应分析</strong>：
+<ul>
+<li>发送端发出一个单频确定性正弦信号，由于存在多条传输路径，接收端收到的信号是各条不同时延、不同衰减的路径信号的矢量叠加。</li>
+<li>叠加的结果使得接收信号的包络 $R(t)$ 和相位 $\theta(t)$ 变成了缓慢随机变化的波形。</li>
+</ul>
+</li>
+<li><strong>多径传播给信号带来的三大严重危害结论</strong>：
+<ol>
+<li><strong>瑞利型衰落</strong>：使接收信号产生严重的包络起伏衰落（若不含直射径，包络服从瑞利分布）。</li>
+<li><strong>频率弥散</strong>：多径的时变效应导致单频信号发射后，接收波形的频谱被展宽（弥散）。</li>
+<li><strong>频率选择性衰落</strong>：信道对不同频率的信号成分具有极不相同的衰减特性，部分频率被严重衰落。</li>
+</ol>
+</li>
+<li><strong>相关带宽与抗频率选择性衰落的措施</strong>：
+<ul>
+<li><strong>相关带宽</strong>：定义为相邻传输零点之间的频率间隔 $\Delta f = \frac{1}{\tau}$（$\tau$ 为多径间的最大相对时延差）。</li>
+<li><strong>信号传输的无选择性衰落准则</strong>：为了避免数字信号发生频率选择性衰落（码间串扰严重），必须使<strong>信号带宽 $B_s$ 远小于相关带宽 $\Delta f$</strong>。
+<ul>
+<li>工程经验公式：$B_s = (\frac{1}{3} \sim \frac{1}{5}) \Delta f$。</li>
+<li>对应数字码元宽度设计要求：$T_s = (3 \sim 5) \tau$（即必须降低码元速率 $R_B$）。</li>
+</ul>
+</li>
+<li><strong>工程上克服随参信道衰落的其他核心有效措施</strong>：<strong>分集接收技术</strong>、<strong>扩频技术</strong>、<strong>OFDM（正交频分复用）技术</strong>。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="4-5-信道噪声">4.5 信道噪声</h2>
+<h3 id="1-噪声分类与概念">1. 噪声分类与概念</h3>
+<ul>
+<li><strong>定义</strong>：信道中存在的所有不希望有的、会破坏有用信号传输的电信号总称为加性噪声 $n(t)$。</li>
+<li><strong>按来源分类</strong>：
+<ul>
+<li><strong>人为噪声</strong>：由人类活动产生（如工频干扰、汽车点火噪声、其他无线电设备干扰）。</li>
+<li><strong>自然噪声</strong>：大自然固有的（如闪电天电噪声、热噪声、散弹噪声、宇宙噪声）。</li>
+</ul>
+</li>
+<li><strong>按噪声谱性质及波形分类</strong>：
+<ul>
+<li><strong>脉冲噪声</strong>：表现为突发的尖峰脉冲。</li>
+<li><strong>窄带/单频噪声</strong>：能量集中在极窄的连续频带或单一频率上。</li>
+<li><strong>起伏噪声</strong>：包含热噪声、散弹噪声和宇宙噪声。通常性质最稳定，是分析通信系统抗噪性能的主要研究对象。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-起伏噪声中的热噪声">2. 起伏噪声中的热噪声</h3>
+<ul>
+<li><strong>热噪声机理</strong>：由导体内部电子在特定温度下的无规则热运动引起。</li>
+<li><strong>热噪声电压有效值公式</strong>：$V = \sqrt{4kTRB}$
+<ul>
+<li>$k = 1.38 \times 10^{-23}\text{ J/K}$：波兹曼常数。</li>
+<li>$T$：绝对热力学温度 (K)。</li>
+<li>$R$：导体的电阻阻值 ($\Omega$)。</li>
+<li>$B$：测试系统的等效带宽 (Hz)。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-起伏噪声的统计性质归纳">3. 起伏噪声的统计性质归纳</h3>
+<ul>
+<li><strong>统计特性</strong>：通信中的起伏噪声一般被抽象为<strong>加性高斯白噪声 (AWGN)</strong>。
+<ul>
+<li><strong>高斯</strong>：任意截获的噪声电压值服从正态（高斯）分布。</li>
+<li><strong>白噪声</strong>：其功率谱密度在极宽的频率范围内均匀分布，值为常数 $\frac{n_0}{2}$。</li>
+</ul>
+</li>
+<li><strong>窄带高斯噪声</strong>：当高斯白噪声通过具有选择性的带通滤波器 (BPF) 之后，即演变为谱能量集中在中心频率附近的窄带高斯噪声。</li>
+</ul>
+<h3 id="4-噪声等效带宽-B-n">4. 噪声等效带宽 ($B_n$)</h3>
+<ul>
+<li><strong>物理意义与定义</strong>：为了计算方便，将一个实际接收滤波器转换为一个理想的矩形滤波器。转换的原则是：<strong>使通过宽度为 $B_n$ 的理想矩形滤波器的总噪声功率，等于通过该实际接收滤波器的总噪声功率</strong>。</li>
+</ul>
+<hr>
+<h2 id="4-6-信道容量">4.6 信道容量</h2>
+<h3 id="1-概念与基本物理量定义">1. 概念与基本物理量定义</h3>
+<ul>
+<li><strong>定义</strong>：信道容量指信道能够实现<strong>无差错（或任意小差错）传输时的最大平均信息速率</strong>。</li>
+<li><strong>离散（离散输入输出）信道容量描述</strong>：
+<ul>
+<li><strong>信源发送的平均信息量（熵）</strong>：$H(x) = -\sum P(x_i) \log_2 P(x_i)$。</li>
+<li><strong>因信道噪声而损失的平均信息量（条件熵）</strong>：$H(x/y)$（由信道转移概率决定）。</li>
+<li><strong>信息传输速率 $R$</strong>：$R = r \cdot [H(x) - H(x/y)]$（$r$ 为信道每秒传输的符号数，即符号速率）。</li>
+<li><strong>离散信道容量 $C$</strong>：通过调整信源符号的概率分布，使信息传输速率达到最大值：$C = \max R$（单位：bit/symbol 或 bit/s）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-连续信道容量-——-香农公式-Shannon-Formula">2. 连续信道容量 —— 香农公式 (Shannon Formula)</h3>
+<ul>
+<li><strong>经典香农公式表达式</strong>：<br>
+$$C = B \cdot \log_2\left(1 + \frac{S}{N}\right) = B \cdot \log_2\left(1 + \frac{S}{n_0 B}\right)$$
+<ul>
+<li>$C$：连续信道容量（最大无差错传输速率，单位：bit/s）。</li>
+<li>$B$：信道带宽 (Hz)。</li>
+<li>$S$：信号平均功率 (W)。</li>
+<li>$N = n_0 B$：加性高斯白噪声的总功率 (W)。</li>
+<li>$n_0$：单边噪声功率谱密度 (W/Hz)。</li>
+</ul>
+</li>
+<li><strong>香农公式的重要结论与演变规律</strong>：
+<ol>
+<li>增大信号功率 $S$ 或减小噪声谱密度 $n_0$ 均可使 $C$ 增加。当 $S \rightarrow \infty$ 或 $n_0 \rightarrow 0$ 时，信道容量 $C \rightarrow \infty$。</li>
+<li>增大信道带宽 $B$ 可以使容量 $C$ 增加，<strong>但带宽 $B$ 的增加并不能使 $C$ 无限制地增大</strong>。因为随着 $B$ 的增大，引入的总噪声功率 $N$ 也会等比例增大，从而导致信噪比下降。</li>
+<li><strong>带宽极限结论</strong>：当带宽 $B \rightarrow \infty$ 时，连续信道容量趋于一个饱和确定极限值：<br>
+$$\lim_{B \rightarrow \infty} C = \log_2 e \cdot \frac{S}{n_0} \approx 1.44 \cdot \frac{S}{n_0}$$</li>
+<li><strong>三要素互换应用（香农公式的物理意义）</strong>：
+<ul>
+<li>在容量 $C$ 保持一定的前提下，<strong>信道带宽 $B$、信噪比 $\frac{S}{N}$ 以及传输时间 $t$ 三者之间可以互相转换</strong>。</li>
+<li>可以通过增加信道带宽 $B$ 的方法，来换取对系统信噪比 $\frac{S}{N}$ 要求的降低（例如空间卫星通信中常用扩频体制）。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1>第五章 模拟调制系统</h1>
+<h2 id="5-1-幅度调制（线性调制）原理">5.1 幅度调制（线性调制）原理</h2>
+<h3 id="1-调制的基本概念与目的">1. 调制的基本概念与目的</h3>
+<ul>
+<li><strong>定义</strong>：把消息信号（基带信号）搭载到载波（通常是高频正弦波）的某个参数上。</li>
+<li><strong>解调</strong>：调制的逆过程，从已调信号中恢复出原始消息信号。</li>
+<li><strong>调制的四大核心目的</strong>：
+<ol>
+<li>进行频谱搬移，匹配信道传输特性，减小天线尺寸。</li>
+<li>实现多路复用（如 FDM），提高信道利用率。</li>
+<li>改善系统性能，提高抗干扰能力（增强可靠性与有效性）。</li>
+<li>实现合理的频率分配。</li>
+</ol>
+</li>
+<li><strong>模拟调制分类</strong>：
+<ul>
+<li><strong>幅度调制（线性调制）</strong>：AM、DSB、SSB、VSB。</li>
+<li><strong>角度调制（非线性调制）</strong>：FM、PM。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-常规调幅（AM）">2. 常规调幅（AM）</h3>
+<ul>
+<li><strong>时域表达式</strong>：$s_{AM}(t) = [A_0 + m(t)] \cos \omega_c t = A_0 \cos \omega_c t + m(t) \cos \omega_c t$</li>
+<li><strong>条件与波形特性</strong>：
+<ul>
+<li><strong>正常调幅条件</strong>：调幅系数 $m = \frac{|m(t)|_{max}}{A_0} \le 1$。此时 AM 波的包络正比于调制信号 $m(t)$，解调时可采用极其简单的<strong>包络检波</strong>。</li>
+<li><strong>过调幅 ($m &gt; 1$)</strong>：包络产生波形严重失真，无法再用包络检波恢复信号。</li>
+</ul>
+</li>
+<li><strong>频谱与带宽</strong>：频谱由载频分量、上边带（USB）和下边带（LSB）组成。传输带宽是基带信号最高频率 $f_H$ 的两倍，即 $B_{AM} = 2f_H$。</li>
+<li><strong>缺点（效率低下）</strong>：载波分量 $A_0 \cos \omega_c t$ 不含有用信息，却“浪费”了绝大部分的发射功率。当满调幅（$m=1$）且调制信号为单频正弦波时，AM 的最大功率利用率（调制效率）仅为 $1/3$（即 $33.3%$）。</li>
+<li><strong>优点</strong>：接收机极其简单，广泛用于中短波无线电广播。</li>
+</ul>
+<h3 id="3-双边带调制（DSB-SC）">3. 双边带调制（DSB-SC）</h3>
+<ul>
+<li><strong>时域表达式</strong>：$s_{DSB}(t) = m(t) \cos \omega_c t$</li>
+<li><strong>核心特点</strong>：
+<ul>
+<li>相比 AM 抑制了载波分量，只传输上、下边带，因此功率利用率高达 $100%$。</li>
+<li>传输带宽与 AM 相同：$B_{DSB} = 2f_H$。</li>
+<li><strong>局限性</strong>：由于已调信号的包络不再与 $m(t)$ 成正比（在 $m(t)$ 改变符号时载波相位反转），故不能采用普通的包络检波，接收端必须使用复杂的<strong>相干解调</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-单边带调制（SSB）">4. 单边带调制（SSB）</h3>
+<ul>
+<li><strong>核心思想</strong>：由于双边带信号的两个边带（上边带和下边带）互为镜像，完全对称，包含相同的有用信息，因此可以只传输其中一个边带。</li>
+<li><strong>产生方法</strong>：
+<ol>
+<li><strong>滤波法</strong>：先形成 DSB 信号，再通过边带滤波器滤除其中一个边带。<strong>技术难点</strong>：要求滤波器在载频附近具有极陡峭的截止特性。</li>
+<li><strong>相移法</strong>：利用希尔伯特变换（精确相移 $\pi/2$），公式表示为 $s_{SSB}(t) = \frac{1}{2}m(t)\cos \omega_c t \mp \frac{1}{2}\hat{m}(t)\sin \omega_c t$（负号对应上边带 USB，正号对应下边带 LSB）。</li>
+</ol>
+</li>
+<li><strong>核心优点</strong>：
+<ul>
+<li><strong>频带利用率极高</strong>：传输带宽仅为 AM/DSB 的一半，即 $B_{SSB} = f_H$。在短波通信和多路载波电话中占有重要地位。</li>
+<li><strong>低功耗特性</strong>：不传送载波和另一个边带，显著节省发射功率。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：收发设备复杂，同样需要相干解调。</li>
+</ul>
+<h3 id="5-残留边带调制（VSB）">5. 残留边带调制（VSB）</h3>
+<ul>
+<li><strong>核心思想</strong>：介于 SSB 与 DSB 之间的折中方案。为了克服 SSB 滤波器极难制作的缺点，允许另一部分边带“残留”一部分。</li>
+<li><strong>无失真恢复条件</strong>：残留边带滤波器（接收端解调滤波器）的传输函数 $H(\omega)$ 在载频 $\omega_c$ 处必须具有<strong>互补对称特性</strong>，即满足：$H(\omega + \omega_c) + H(\omega - \omega_c) = \text{常数}$。</li>
+<li><strong>特点与应用</strong>：带宽仅比 SSB 略大，却极大换取了滤波器的设计简化。经典应用包括<strong>商业电视广播中的图像信号传输</strong>。</li>
+</ul>
+<h3 id="6-线性解调方式">6. 线性解调方式</h3>
+<ul>
+<li><strong>相干解调</strong>：将接收到的信号乘以一个与发射端同频同相的同步载波，再通过低通滤波器（LPF）。适用于所有线性调制系统（DSB、SSB、VSB、AM）。</li>
+<li><strong>包络检波</strong>：利用二极管与 RC 电路提取信号包络。设备简单、成本低，但只适用于正常调幅的 AM 信号。</li>
+</ul>
+<hr>
+<h2 id="5-2-线性调制系统的抗噪声性能">5.2 线性调制系统的抗噪声性能</h2>
+<h3 id="1-分析指标：制度增益-G">1. 分析指标：制度增益 ($G$)</h3>
+<ul>
+<li>定义为解调器输出信噪比与输入信噪比的比值：$G = \frac{S_o/N_o}{S_i/N_i}$</li>
+</ul>
+<h3 id="2-DSB-与-SSB-的抗噪声性能比较">2. DSB 与 SSB 的抗噪声性能比较</h3>
+<ul>
+<li><strong>结论</strong>：
+<ul>
+<li>DSB 相干解调系统的制度增益 $G_{DSB} = 2$。</li>
+<li>SSB 相干解调系统的制度增益 $G_{SSB} = 1$。</li>
+<li><strong>深层物理规律</strong>：虽然看似 DSB 的增益高，但在解调器输入信号功率 $S_i$、信道噪声单边谱密度 $n_0$、基带信号带宽 $f_H$ 完全相同的同等条件下，<strong>DSB 和 SSB 最终的输出信噪比 $S_o/N_o$ 是完全相同的</strong>。因此，两者的抗噪声性能相同。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-AM-包络检波系统的抗噪声性能与门限效应">3. AM 包络检波系统的抗噪声性能与门限效应</h3>
+<ul>
+<li><strong>大信噪比时 ($S_i/N_i \gg 1$)</strong>：
+<ul>
+<li>制度增益为 $G_{AM} = \frac{2\overline{m^2(t)}}{A_0^2 + \overline{m^2(t)}}$。</li>
+<li>当 $100%$ 满调幅且调制信号为单频正弦波时，$G_{AM} = \frac{2}{3}$。其抗噪声性能明显劣于相干解调系统。</li>
+</ul>
+</li>
+<li><strong>小信噪比时（门限效应）</strong>：
+<ul>
+<li>当输入信噪比低于某一特定数值时，噪声由于非线性检波作用会把有用信号“吞没”，导致输出信噪比急剧恶化，这种现象称为<strong>门限效应</strong>。</li>
+<li>包络检波存在门限效应，而相干解调系统不存在门限效应。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="5-3-非线性调制（角度调制）原理">5.3 非线性调制（角度调制）原理</h2>
+<h3 id="1-角度调制的基本概念">1. 角度调制的基本概念</h3>
+<ul>
+<li>已调信号一般表达式：$s(t) = A \cos [\omega_c t + \varphi(t)]$</li>
+<li><strong>调相 (PM)</strong>：瞬时相位偏移与调制信号成正比：$\varphi(t) = K_p m(t)$</li>
+<li><strong>调频 (FM)</strong>：瞬时频率偏移与调制信号成正比：$\frac{d\varphi(t)}{dt} = K_f m(t)$，即 $\varphi(t) = K_f \int m(\tau) d\tau$。</li>
+<li><strong>相互转换关系</strong>：
+<ul>
+<li>调制信号经过<strong>微分</strong>后再进行调频，可得到调相波（PM）。</li>
+<li>调制信号经过<strong>积分</strong>后再进行调相，可得到调频波（FM）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-单音调频与卡森公式（FM-带宽）">2. 单音调频与卡森公式（FM 带宽）</h3>
+<ul>
+<li><strong>调频指数</strong>：$m_f = \frac{\Delta f}{f_m}$（$\Delta f$ 为最大频偏，$f_m$ 为调制信号频率）。</li>
+<li><strong>卡森公式（宽带调频传输带宽）</strong>：<br>
+$$B_{FM} = 2(\Delta f + f_m) = 2(m_f + 1)f_m$$
+<ul>
+<li><em>例如</em>：调频广播中，最大频偏 $\Delta f = 75\text{ kHz}$，最高调制频率 $f_m = 15\text{ kHz}$，则调频指数 $m_f = 5$，带宽 $B_{FM} = 2(75 + 15) = 180\text{ kHz}$。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-调频信号的产生与解调">3. 调频信号的产生与解调</h3>
+<ul>
+<li><strong>产生方法</strong>：
+<ol>
+<li><strong>直接法</strong>：用调制电压直接控制压控振荡器（VCO）的频率。优点是电路简单、频偏大；缺点是中心频率稳定度不高。</li>
+<li><strong>间接法（阿姆斯特朗法）</strong>：先将调制信号积分进行窄带调频（NBFM），然后通过多次倍频和混频器实现宽带调频（WBFM）。优点是中心频率稳定度极好。</li>
+</ol>
+</li>
+<li><strong>解调方法</strong>：通常利用<strong>鉴频器</strong>（由微分器和包络检波器组合而成）完成“频率-电压”的线性转换。</li>
+</ul>
+<hr>
+<h2 id="5-4-调频系统的抗噪声性能">5.4 调频系统的抗噪声性能</h2>
+<h3 id="1-大信噪比时的解调性能（以带宽换取信噪比）">1. 大信噪比时的解调性能（以带宽换取信噪比）</h3>
+<ul>
+<li><strong>噪声特征</strong>：鉴频器的输出噪声功率谱密度已不再是均匀分布，而是与频率的平方（$f^2$）成正比，呈现<strong>抛物线分布</strong>。</li>
+<li><strong>制度增益</strong>：对于单频正弦调制信号，大信噪比下宽带调频系统的制度增益为：$G_{FM} = 3m_f^2 (m_f + 1) \approx 3m_f^3$（当 $m_f \gg 1$ 时）。</li>
+<li><strong>优越性总结</strong>：在大信噪比情况下，若接收端输入功率和噪声相同，宽带调频的输出信噪比是调幅（AM）系统的 $3m_f^2$ 倍。<strong>调频系统是通过显著增加传输带宽，来换取输出信噪比的大幅改善</strong>。</li>
+</ul>
+<h3 id="2-小信噪比时的门限效应">2. 小信噪比时的门限效应</h3>
+<ul>
+<li>与 AM 包络检波类似，调频非相干解调也存在<strong>门限效应</strong>。一般鉴频器的门限值大约在 $10\text{ dB}$ 左右。低于该值时，输出信噪比会断崖式下跌。</li>
+<li><strong>降低门限值（门限扩展）的措施</strong>：采用锁相环（PLL）解调器或负反馈解调器，可将门限降低 $6 \sim 10\text{ dB}$。</li>
+</ul>
+<h3 id="3-预加重和去加重技术">3. 预加重和去加重技术</h3>
+<ul>
+<li><strong>背景问题</strong>：鉴频器输出噪声在高端随 $f^2$ 剧烈增大，而语音/音乐信号的能量主要集中在低频端。这导致解调输出后，信号的高频部分信噪比极差。</li>
+<li><strong>基本原理</strong>：保持输出信号完全不变，有效降低高端噪声。
+<ul>
+<li><strong>发送端（预加重）</strong>：在调制前加入预加重网络 $H_p(f)$，人为提升调制信号的高频分量。</li>
+<li><strong>接收端（去加重）</strong>：在解调输出后加入去加重网络 $H_d(f)$，让高频分量滚降恢复原状，在有效地大幅压低高频噪声的同时，使传输信号不发生失真。</li>
+<li>必须严格满足理想条件：$H_p(f) \cdot H_d(f) = 1$。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="5-5-各种模拟调制系统的综合比较">5.5 各种模拟调制系统的综合比较</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">调制方式</th>
+<th style="text-align:left">信号带宽</th>
+<th style="text-align:left">制度增益（单音）</th>
+<th style="text-align:left">设备复杂度</th>
+<th style="text-align:left">主要应用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>AM</strong></td>
+<td style="text-align:left">$2f_m$</td>
+<td style="text-align:left">$\le \frac{2}{3}$（很低）</td>
+<td style="text-align:left">极其简单</td>
+<td style="text-align:left">中短波无线电调幅广播</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>DSB</strong></td>
+<td style="text-align:left">$2f_m$</td>
+<td style="text-align:left">$2$</td>
+<td style="text-align:left">中等</td>
+<td style="text-align:left">调频立体声中的差信号调制</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SSB</strong></td>
+<td style="text-align:left">$f_m$</td>
+<td style="text-align:left">$1$</td>
+<td style="text-align:left">极其复杂</td>
+<td style="text-align:left">短波单边带通信、多路载波电话网</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>VSB</strong></td>
+<td style="text-align:left">$&gt; f_m$</td>
+<td style="text-align:left">介于 SSB 与 DSB 之间</td>
+<td style="text-align:left">较复杂</td>
+<td style="text-align:left">商业电视广播中的图像信号传输</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>FM</strong></td>
+<td style="text-align:left">$2(m_f + 1)f_m$</td>
+<td style="text-align:left">$3m_f^2$（极大）</td>
+<td style="text-align:left">复杂</td>
+<td style="text-align:left">长距离高质量卫星、移动、微波通信，高保真 FM 广播</td>
+</tr>
+</tbody>
+</table>
+<h3 id="性能维度总归纳：">性能维度总归纳：</h3>
+<ol>
+<li><strong>抗噪声性能</strong>：$\text{FM}$（最好）$&gt; \text{DSB/SSB/VSB} &gt; \text{AM}$（最差）。</li>
+<li><strong>频带利用率</strong>：$\text{SSB}$（最高）$&gt; \text{VSB} &gt; \text{DSB/AM} &gt; \text{FM}$（最差）。</li>
+<li><strong>设备复杂度</strong>：$\text{AM}$（最简）$&lt; \text{DSB/FM} &lt; \text{VSB} &lt; \text{SSB}$（最繁）。</li>
+</ol>
+<hr>
+<h2 id="5-6-频分复用-FDM">5.6 频分复用 (FDM)</h2>
+<ul>
+<li><strong>定义与目的</strong>：按<strong>频率</strong>划分信道。在一条总通信信道中，通过将各路信号搬移到不同的载波频率上，实现多路信号的同时、互不干扰传输。</li>
+<li><strong>核心方法</strong>：各路基带信号 $\rightarrow$ 各自独立的高频调制（频谱错开） $\rightarrow$ 线性相加合成总信号 $\rightarrow$ 信道传输 $\rightarrow$ 接收端带通滤波器（BPF）分路分离 $\rightarrow$ 各路独立解调恢复。</li>
+</ul>
+<h1>第六章 数字基带传输</h1>
+<h2 id="6-1-引言与系统组成">6.1 引言与系统组成</h2>
+<h3 id="1-基带传输系统特征与意义">1. 基带传输系统特征与意义</h3>
+<ul>
+<li><strong>系统特征</strong>：直接传输基带信号，不包含调制解调器。</li>
+<li><strong>研究意义</strong>：
+<ul>
+<li>广泛应用于近程数据通信系统。</li>
+<li>包含带通系统的许多基本问题（如码间干扰 ISI、功率谱密度 PSD、误码率 $P_e$）。</li>
+<li>带通传输系统可等效为基带传输系统来研究。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-基带传输系统组成结构">2. 基带传输系统组成结构</h3>
+<p>基带传输系统主要由以下几部分组成：</p>
+<ul>
+<li><strong>发送滤波器（信道信号形成器）</strong>：将原始基带信号变为适合于信道传输的基带信号。目的在于匹配信道、减小码串、利于同步提取。</li>
+<li><strong>信道</strong>：给基带信号提供传输通道。</li>
+<li><strong>接收滤波器</strong>：滤除带外噪声，对信道特性进行均衡，使输出的基带波形有利于抽样判决。</li>
+<li><strong>抽样判决器</strong>：在位定时脉冲的作用下，对接收滤波器的输出波形进行抽样判决，确定发送信码序列，再生基带信号。</li>
+<li><strong>同步提取</strong>：从接收信号中提取用于抽样的位定时脉冲。</li>
+</ul>
+<hr>
+<h2 id="6-2-数字基带信号及其频谱特性">6.2 数字基带信号及其频谱特性</h2>
+<h3 id="1-六种基本信号波形">1. 六种基本信号波形</h3>
+<ul>
+<li><strong>（a）单极性波形</strong>：极性单一。含有直流分量和低频分量。主要用于设备内部和数字调制器中。</li>
+<li><strong>（b）双极性波形</strong>：等概时无直流分量，抗扰能力较强。常用于 V.24、RS-232C 接口标准和数字调制器中。</li>
+<li><strong>（c）单归零码（RZ）</strong>：脉冲宽度 $\tau &lt; T_B$（常取半占空比 $\tau = T_B/2$）。能直接提取位定时信号，常作为其他码型提取同步时钟的过渡码型。</li>
+<li><strong>（d）双归零码</strong>：兼有双极性和归零波形的特点。</li>
+<li><strong>（e）差分波形（相对码波形）</strong>：利用相邻码元电平的跳变/不变来表示信息。
+<ul>
+<li>传号差分：1变0不变；空号差分：0变1不变。</li>
+<li>优点：可以消除设备初始状态不确定性带来的影响。</li>
+</ul>
+</li>
+<li><strong>（f）多电平波形</strong>：一个脉冲可携带多个比特信息。在传码率一定时，多电平波形的传信率更高，适用于高数据速率传输系统。</li>
+</ul>
+<h3 id="2-基带信号的频谱特性（PSD）">2. 基带信号的频谱特性（PSD）</h3>
+<p>基带信号通常表示为随机脉冲序列，其双边功率谱密度 $P_S(f)$ 可分解为<strong>连续谱</strong> $P_u(f)$ 和<strong>离散谱</strong> $P_v(f)$：</p>
+<p>$$P_S(f) = P_u(f) + P_v(f)$$</p>
+<ul>
+<li><strong>连续谱</strong>：决定信号的带宽 $B$。</li>
+<li><strong>离散谱</strong>：决定是否含有直流分量和定时分量（$m=1$ 时）。</li>
+</ul>
+<h4 id="功率谱特性归纳：">功率谱特性归纳：</h4>
+<ul>
+<li><strong>带宽分析</strong>：二进制基带信号的带宽主要依赖单个码元波形的频谱函数。占空比越小，占用频带越宽。若以谱的第一个零点计算：
+<ul>
+<li>不归零（NRZ，$\tau = T_S$）基带信号带宽：$B_S = \frac{1}{\tau} = f_s$</li>
+<li>半占空归零（RZ，$\tau = T_S / 2$）基带信号带宽：$B_S = \frac{1}{\tau} = 2f_s$</li>
+<li>其中 $f_s = \frac{1}{T_S}$ 为位定时信号频率，数值上与码元速率 $R_B$ 相等。</li>
+</ul>
+</li>
+<li><strong>离散线谱存在条件</strong>：
+<ul>
+<li><strong>单极性信号</strong>：单极性 NRZ 信号中<strong>无定时分量</strong>（需进行波形变换才能获取）；单极性 RZ 信号中<strong>含有定时分量</strong>，可以直接提取。二者均含有直流分量。</li>
+<li><strong>等概双极性信号</strong>：既没有直流分量，也没有离散谱（无定时分量）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="6-3-基带传输的常用码型">6.3 基带传输的常用码型</h2>
+<h3 id="1-选码原则">1. 选码原则</h3>
+<ol>
+<li>无直流分量，且低频分量小；</li>
+<li>定时信息丰富；</li>
+<li>高频分量小（节省带宽、减小串扰）；</li>
+<li>不受信源统计特性的影响（不受等概或非等概影响）；</li>
+<li>具有自检能力；</li>
+<li>编、译码简单。</li>
+</ol>
+<h3 id="2-几种常用的传输码型">2. 几种常用的传输码型</h3>
+<ul>
+<li><strong>AMI 码（传号交替反转码）</strong>：
+<ul>
+<li>编码规则：“1” $\rightarrow$ +1、-1 交替；“0” $\rightarrow$ 0。</li>
+<li>优点：不含直流分量，低频成分少；伪三电平；编译码电路简单，有宏观自检能力。</li>
+<li>缺点：当信码出现长连“0”串时，信号长时间无跳变，难以获取定时信息。</li>
+<li>应用：PCM 24路基群（北美系列）1.544 Mb/s 的线路码型。</li>
+</ul>
+</li>
+<li><strong>HDB3 码（3阶高密度双极性码）</strong>：
+<ul>
+<li>编码规则：
+<ul>
+<li>连“0”个数不超过3个时，遵循 AMI 码规则。</li>
+<li>连“0”个数超过3个时，将第4个“0”改为非“0”脉冲，记为破坏脉冲 $V$（$+V$ 或 $-V$）。</li>
+<li>相邻 $V$ 码的极性必须交替出现以确保无直流。</li>
+<li>$V$ 码的极性应与前一个非“0”脉冲的极性相同，若不相同，则将 <code>0000</code> 更改为 $+B00+V$ 或 $-B00-V$（$B$ 称为调节脉冲）。</li>
+<li>$V$ 码之后的传号码（“1”码）极性也要交替。</li>
+</ul>
+</li>
+<li>优点：保持了 AMI 码的优点，同时将连“0”码限制在3个以内，有利于位定时信号的提取。</li>
+<li>应用：A律 PCM 四次群以下的线路接口码型。</li>
+</ul>
+</li>
+<li><strong>双相码（曼彻斯特码）</strong>：
+<ul>
+<li>编码规则：“0” $\rightarrow$ <code>01</code>；“1” $\rightarrow$ <code>10</code>（在码元正中间进行电平跳变）。</li>
+<li>特点：二电平（极性相反），无直流分量，位定时信息丰富，连码个数不超过2个。</li>
+<li>缺点：带宽比原信码大1倍。</li>
+<li>应用：局域网中的传输码型。</li>
+</ul>
+</li>
+<li><strong>差分双相码</strong>：
+<ul>
+<li>特点：利用每个码元中间的电平跳变进行同步。而码元开始处是否存在额外的跳变用来确定信码：有跳变表示“1”，无跳变表示“0”。用于解决双相码因极性反转引起的译码错误。</li>
+</ul>
+</li>
+<li><strong>CMI 码（传号反转码）</strong>：
+<ul>
+<li>编码规则：“1” $\rightarrow$ <code>11</code> 和 <code>00</code> 交替；“0” $\rightarrow$ <code>01</code>。</li>
+<li>特点：双极性二电平编码，连码个数不超过3个。</li>
+<li>应用：A律 PCM 四次群接口码型；速率低于 8.448 Mb/s 的光缆传输系统。</li>
+</ul>
+</li>
+<li><strong>块编码（nBmB码 / nBmT码）</strong>：
+<ul>
+<li><strong>nBmB 码</strong>（如 4B5B）：将 $n$ 位二进制码分为一组，置换成 $m$ 位二进制码（$m &gt; n$）。利用多出的组合选择有利码组，限制连“0”个数，实现良好的同步和检错功能，但带宽增大。</li>
+<li><strong>nBmT 码</strong>（如 4B3T）：将 $n$ 个二进制码变换成 $m$ 个三进制码（$m &lt; n$）。在相同码速率下可提高频带利用率。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="6-4-数字基带信号传输与码间串扰（ISI）">6.4 数字基带信号传输与码间串扰（ISI）</h2>
+<h3 id="1-码间串扰（ISI）的定量分析">1. 码间串扰（ISI）的定量分析</h3>
+<ul>
+<li><strong>产生原因</strong>：基带传输系统的总传输特性不理想，导致前一码元的波形拖尾延伸到当前码元的抽样时刻，造成干扰。</li>
+<li><strong>系统传输总特性</strong>：设发送滤波器为 $G_T(\omega)$，信道为 $C(\omega)$，接收滤波器为 $G_R(\omega)$，则总传输特性为：</li>
+</ul>
+<p>$$H(\omega) = G_T(\omega)C(\omega)G_R(\omega)$$</p>
+<ul>
+<li><strong>接收波形抽样值</strong>：在 $t = kT_S + t_0$ 时刻对接收滤波器输出 $r(t)$ 进行抽样：</li>
+</ul>
+<p>$$r(kT_S + t_0) = a_k h(t_0) + \sum_{n \neq k} a_n h[(k-n)T_S + t_0] + n_R(t_0)$$</p>
+<ul>
+<li>第一项 $a_k h(t_0)$：第 $k$ 个接收码元的抽样值（有用信号）。</li>
+<li>第二项 $\sum a_n \dots$：<strong>码间串扰值</strong>（其他码元在当前抽样时刻的代数和）。</li>
+<li>第三项 $n_R(t_0)$：加性高斯白噪声经过接收滤波器后的输出噪声。</li>
+</ul>
+<h3 id="2-无码间串扰的条件">2. 无码间串扰的条件</h3>
+<p>要彻底消除 ISI，必须使本码元抽样时刻有值，而其他码元在当前抽样时刻的值均为0。</p>
+<ul>
+<li><strong>时域条件</strong>：</li>
+</ul>
+<p>$$h(kT_B) = \begin{cases} 1, &amp; k = 0 \ 0, &amp; k \text{ 为其他整数} \end{cases}$$</p>
+<ul>
+<li><strong>频域条件（奈奎斯特第一准则）</strong>：</li>
+</ul>
+<p>$$\sum_{i} H\left(\omega + \frac{2\pi i}{T_B}\right) = T_B, \quad |\omega| \le \frac{\pi}{T_B}$$</p>
+<p>这是检验或设计 $H(\omega)$ 能否消除码间串扰的理论依据。</p>
+<h3 id="3-H-omega-的设计">3. $H(\omega)$ 的设计</h3>
+<ul>
+<li><strong>理想低通特性</strong>：
+<ul>
+<li><strong>奈奎斯特带宽（最窄带宽）</strong>：$B = \frac{1}{2T_B} = f_N$</li>
+<li><strong>奈奎斯特速率（无 ISI 的最高波特率）</strong>：$R_B = \frac{1}{T_B} = 2f_N$</li>
+<li><strong>存在问题</strong>：特性太陡峭，物理上无法实现；响应曲线尾部收敛慢（按 $\frac{1}{t}$ 衰减），摆幅大，对定时要求极严（定时抖动会引起严重的 ISI）。</li>
+</ul>
+</li>
+<li><strong>余弦滚降特性</strong>：
+<ul>
+<li>引入滚降系数 $\alpha$（$0 &lt; \alpha \le 1$），超出 $f_N$ 的扩展量为 $f_\Delta$，且 $\alpha = \frac{f_\Delta}{f_N}$。</li>
+<li><strong>带宽</strong>：$B = f_N + f_\Delta = (1+\alpha)f_N$</li>
+<li><strong>特性</strong>：$\alpha$ 越大，时域响应 $h(t)$ 的拖尾衰减越快（升余弦滚降时按 $\frac{1}{t^3}$ 衰减），尾部摆幅小，对定时要求降低；但占用的频带宽度 $B$ 变大，频带利用率下降。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="6-5-基带传输系统的抗噪声性能">6.5 基带传输系统的抗噪声性能</h2>
+<p>在满足无 ISI 条件下，分析由加性高斯白噪声引起的误码率 $P_e$。</p>
+<ul>
+<li><strong>二进制双极性系统</strong>：
+<ul>
+<li>抽样判决电平取值为 $+A$ 和 $-A$。</li>
+<li>最佳判决门限电平：等概时 $V_d = 0$。</li>
+</ul>
+</li>
+<li><strong>二进制单极性系统</strong>：
+<ul>
+<li>抽样判决电平取值为 $+A$ 和 $0$。</li>
+<li>最佳判决门限电平：等概时 $V_d = \frac{A}{2}$。</li>
+</ul>
+</li>
+<li><strong>对比归纳</strong>：在相同码元振幅 $A$ 和相同噪声功率 $\sigma^2$ 的等概条件下，<strong>双极性系统的抗噪声性能优于单极性系统</strong>（因为双极性的信号两电平判决间距为 $2A$，而单极性仅为 $A$）。</li>
+</ul>
+<hr>
+<h2 id="6-6-眼图（Eye-Diagram）">6.6 眼图（Eye Diagram）</h2>
+<ul>
+<li><strong>定义</strong>：眼图是用实验手段估计和调整基带传输系统性能的一种直观方法。</li>
+<li><strong>观察方法</strong>：将示波器跨接在接收滤波器的输出端，并将示波器的扫描周期调整为基带信号周期 $T_B$ 的整数倍。</li>
+<li><strong>成因与判断</strong>：
+<ul>
+<li>示波器上显示的杂乱线迹是由各码元重叠引起的。</li>
+<li><strong>无 ISI 时</strong>：“眼睛”张得最大，线迹细而清晰。</li>
+<li><strong>有 ISI 时</strong>：“眼睛”变小，线迹杂乱、模糊。</li>
+<li><strong>存在噪声时</strong>：眼图线迹变成模糊的带状线。噪声越大，线条越宽，“眼睛”张开越小甚至闭合。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="6-7-部分响应和时域均衡">6.7 部分响应和时域均衡</h2>
+<p>部分响应技术是改善系统性能的重大措施，旨在解决理想低通特性无法实现、而滚降特性又牺牲频带利用率的矛盾。</p>
+<h3 id="1-部分响应系统设计思想">1. 部分响应系统设计思想</h3>
+<ul>
+<li><strong>核心思路</strong>：有控制地在抽样时刻引入码间串扰。原本互相独立的码元通过相关运算变成了相关码元（<strong>相关编码</strong>）。</li>
+<li><strong>优点</strong>：可以实现 $2 \text{ 波特/赫兹}$ 的最高频带利用率，同时使传输波形的尾巴衰减大、收敛快。</li>
+</ul>
+<h3 id="2-第Ⅰ类部分响应系统与差错传播">2. 第Ⅰ类部分响应系统与差错传播</h3>
+<ul>
+<li><strong>相关编码方程</strong>：当前码元的抽样值 $C_k$ 仅受前一码元的影响：</li>
+</ul>
+<p>$$C_k = a_k + a_{k-1}$$</p>
+<ul>
+<li><strong>电平数</strong>：若输入二进制序列 $a_k \in {-1, +1}$，则接收抽样值 $C_k \in {-2, 0, +2}$（伪三进制序列）。</li>
+<li><strong>差错传播问题</strong>：由于译码方程为 $a_k = C_k - a_{k-1}$，恢复当前码元必须依赖前一码元的判决结果。若 $C_k$ 因干扰判错，错误就会一直传播下去，导致后续一连串恢复的数据全部出错。</li>
+</ul>
+<h3 id="3-解决差错传播的途径：预编码技术">3. 解决差错传播的途径：预编码技术</h3>
+<p>为了消除相关码元带来的错误传播，在发送端进行相关编码前先引入<strong>预编码</strong>。</p>
+<ul>
+<li><strong>预编码（模2加）</strong>：</li>
+</ul>
+<p>$$b_k = a_k \oplus b_{k-1}$$</p>
+<ul>
+<li><strong>相关编码（算术加）</strong>：将 $b_k$ 输入发送网络：</li>
+</ul>
+<p>$$C_k = b_k + b_{k-1}$$</p>
+<ul>
+<li><strong>模2判决（接收端）</strong>：由于 $[C_k]<em>{\bmod 2} = [b_k + b</em>{k-1}]<em>{\bmod 2} = b_k \oplus b</em>{k-1} = a_k$，因此接收端只需对 $C_k$ 直接作模2判决即可恢复出 $a_k$：</li>
+</ul>
+<p>$$a_k = [C_k]_{\bmod 2}$$</p>
+<ul>
+<li><strong>效果</strong>：由当前值 $C_k$ 可直接独立得到当前信码 $a_k$，无需知道前一判决结果，从而<strong>彻底消除了差错传播现象</strong>。整个过程概括为：<strong>预编码 — 相关编码 — 模2判决</strong>。</li>
+</ul>
+<h3 id="4-部分响应的一般形式与应用">4. 部分响应的一般形式与应用</h3>
+<p>常见的部分响应波形分为五类。目前应用较多的是<strong>第Ⅰ类</strong>和<strong>第Ⅳ类</strong>：</p>
+<ul>
+<li><strong>第Ⅰ类</strong>：频谱主要集中在低频段，适用于信道频带高频严重受限的场合。</li>
+<li><strong>第Ⅳ类</strong>：<strong>无直流分量</strong>，且低频分量小，便于边带滤波实现单边带调制，在实际中<strong>应用最为广泛</strong>。</li>
+<li><strong>电平数关系</strong>：当输入为 $L$ 进制信号时，经过第Ⅰ、Ⅳ类部分响应系统传输后的输出信号电平数为 $2L-1$ 个。</li>
+<li><strong>抗噪性能局限</strong>：部分响应系统的输出电平数超过了输入信源的进制数 $L$，因此在相同信噪比条件下，部分响应系统的抗噪声性能比普通的 0 类响应系统（无 ISI 系统）要差。</li>
+</ul>
+<h1>第七章 数字调制</h1>
+<h2 id="7-1-数字调制概述">7.1 数字调制概述</h2>
+<ul>
+<li><strong>数字调制与带通传输</strong>：数字调制是用数字基带信号控制载波某个参数的过程。包含调制和解调过程的数字传输系统称为数字带通传输系统。</li>
+<li><strong>基本调制键控方式</strong>：根据受调参数的不同，主要分为振幅键控（ASK）、频移键控（FSK）和相移键控（PSK）。</li>
+<li><strong>实现方法与分类</strong>：主要有模拟调制法和数字键控法。按进制可分为二进制和多进制调制，按技术演进可分为基本调制和新型调制。</li>
+</ul>
+<hr>
+<h2 id="7-2-二进制数字调制原理">7.2 二进制数字调制原理</h2>
+<h3 id="1-2ASK（二进制振幅键控-OOK）">1. 2ASK（二进制振幅键控 / OOK）</h3>
+<ul>
+<li><strong>基本原理</strong>：通过单极性数字基带信号控制载波的幅度。发送“1”时有载波输出，发送“0”时无载波输出（关断状态)。</li>
+<li><strong>调制与解调</strong>：调制方法有模拟调制法（相乘器）和键控法（开关电路）；解调方法包括非相干的包络检波法和相干解调法（同步检测）。</li>
+<li><strong>功率谱与带宽</strong>：2ASK 信号的功率谱由连续谱和离散谱组成，属于线性调制，其谱是基带谱的线性搬移。谱的主瓣带宽（零点带宽）是基带信号带宽的两倍，数值上等于码元速率的两倍（$B_{2ASK} = 2f_B = 2R_B$）。由于基带信号包含直流分量，2ASK 信号中<strong>含有载波分量</strong>。</li>
+</ul>
+<h3 id="2-2FSK（二进制频移键控）">2. 2FSK（二进制频移键控）</h3>
+<ul>
+<li><strong>基本原理</strong>：通过数字基带信号控制载波的频率，即发送“1”和“0”时分别对应不同的载波频率（$\omega_1$ 和 $\omega_2$）。2FSK 可视为两个不同载频的 2ASK 信号的叠加。</li>
+<li><strong>调制与解调</strong>：调制包括模拟调频法（相邻码元间相位连续）和键控法（相邻码元间相位不一定连续）。键控法具有转换速度快、电路简单、波形好及频率稳定度高等优点。解调方法有包络检波法、相干解调法、鉴频法、差分检测法和过零检测法。</li>
+<li><strong>功率谱与带宽</strong>：连续谱的形状随着两个载频之差的大小而变化。其谱零点带宽近似为两个载频之差与两倍基带带宽之和：$B_{2FSK} \approx |f_2 - f_1| + 2f_B$。</li>
+<li><strong>系统应用</strong>：在数字通信中应用广泛，尤其适用于短波无线电线道等衰落信道；国际电信联盟（ITU）建议在数据率低于 1200 b/s 的场合采用 2FSK 体制。</li>
+</ul>
+<h3 id="3-2PSK（二进制相移键控）">3. 2PSK（二进制相移键控）</h3>
+<ul>
+<li><strong>基本原理</strong>：通过双极性数字基带信号控制载波的相位。通常规定发送“0”时初始相位为 $0$，发送“1”时初始相位为 $\pi$。</li>
+<li><strong>调制与解调</strong>：调制有键控法和模拟调制法；解调通常采用相干解调法。</li>
+<li><strong>关键问题</strong>：相干解调需要提取本地相干载波，但在提取过程中容易产生<strong>载波相位模糊</strong>（即本地载波可能发生 0 或 $\pi$ 的相位跳变），这会导致解调出的数字信息全部反转，产生“<strong>倒 $\pi$ 现象</strong>”（反相工作）。</li>
+<li><strong>功率谱与带宽</strong>：2PSK 信号的功率谱形状与 2ASK 相似，带宽同样是基带信号带宽的两倍（$2f_B$）。重要区别在于，当发送概率 $P=1/2$ 时，2PSK 信号中<strong>不含离散谱（即无载波分量）</strong>。</li>
+</ul>
+<h3 id="4-2DPSK（二进制差分相移键控-相对调相）">4. 2DPSK（二进制差分相移键控 / 相对调相）</h3>
+<ul>
+<li><strong>基本原理</strong>：利用前后相邻码元的载波<strong>相对相位变化</strong>来表示数字信息（例如：相位差 $\Delta \phi = 0 \rightarrow “0”$，$\Delta \phi = \pi \rightarrow “1”$），从而彻底解决 2PSK 的相位模糊和倒 $\pi$ 问题。</li>
+<li><strong>差分编码规则</strong>：在调制前，需将绝对码 $a_n$ 转换为相对码 $b_n$，编码规则为：$b_n = a_n \oplus b_{n-1}$（$\oplus$ 为模2加，初始基准 $b_{n-1}$ 可任意设定）。</li>
+<li><strong>解调方法</strong>：
+<ol>
+<li><strong>相干解调 + 码反变换法</strong>：先像 2PSK 一样进行相干解调恢复出相对码序列，再通过码反变换器恢复绝对码，可消除本地载波相位模糊带来的极性颠倒影响。</li>
+<li><strong>差分相干解调（相位比较法）</strong>：无需提取本地相干载波，而是将接收信号延迟一个码元周期 $T_B$，利用相乘器让当前码元与前一码元直接进行相位比较，经低通滤波和抽样判决后直接输出绝对码，<strong>不需要差分译码电路</strong>。</li>
+</ol>
+</li>
+<li><strong>功率谱与带宽</strong>：等概时功率谱密度和频带带宽与 2PSK 完全相同（$B_{2DPSK} = 2f_B$），且谱中无载波分量。</li>
+</ul>
+<hr>
+<h2 id="7-3-二进制数字调制系统抗噪声性能">7.3 二进制数字调制系统抗噪声性能</h2>
+<ul>
+<li><strong>分析条件</strong>：在恒参信道（传输系数为 $K$）及加性高斯白噪声背景下，以系统总误码率 $P_e$ 作为评估指标。</li>
+<li><strong>2ASK 系统</strong>：
+<ul>
+<li>相干解调：抽样判决器输入端波形表现为“单极性基带信号 + 高斯噪声”，其性能分析可以完全借用单极性基带系统的结论。</li>
+<li>包络检波：大信噪比下，发送“1”时检波器输出遵循<strong>广义瑞利分布</strong>，发送“0”时遵循<strong>瑞利分布</strong>。</li>
+</ul>
+</li>
+<li><strong>2FSK 系统</strong>：解调可以看作是由上、下两个独立的 2ASK 滤波器支路分别进行相干解调或包络检波后再进行比较判断。</li>
+<li><strong>2PSK 系统</strong>：相干解调时的抽样判决输入端波形表现为“双极性基带信号 + 高斯噪声”，可以直接借用双极性基带系统的性能分析结论。</li>
+<li><strong>2DPSK 系统</strong>：采用“相干解调+码反变换法”时，由于码反变换器需要利用前后两个连续接收的相对码来译码，如果其中一个相对码出错，就会连带引起解调后的绝对码序列出现双比特错误（即<strong>误码增殖效应</strong>）。在大信噪比（$r \gg 1$）下，2DPSK 的误码率约等于 2PSK 的 2 倍：$P_{e\text{2DPSK}} \approx 2P_{e\text{2PSK}}$。</li>
+</ul>
+<hr>
+<h2 id="7-4-二进制数字调制系统性能比较">7.4 二进制数字调制系统性能比较</h2>
+<h3 id="1-Reliable（可靠性-误码率性能）">1. Reliable（可靠性 / 误码率性能）</h3>
+<ul>
+<li>在相同输入信噪比 $r$ 的条件下，四种系统的误码率性能优劣顺序为：<strong>$2PSK &lt; 2DPSK &lt; 2FSK &lt; 2ASK$</strong>（2PSK 的误码率最低，抗噪声性能最好）。</li>
+<li>在大信噪比（$r \gg 1$）时，同一种键控方式下相干解调与非相干解调（如包络检波、差分相干）的误码率性能相差不大。</li>
+</ul>
+<h3 id="2-Efficiency（有效性-频带宽度）">2. Efficiency（有效性 / 频带宽度）</h3>
+<ul>
+<li><strong>2ASK 与 2PSK</strong>：占用的频带宽度相同，均为 $2R_B$（$R_B$ 为码元速率）。</li>
+<li><strong>2FSK</strong>：频带宽度不仅与基带信号带宽有关，还取决于两个载频之差（$B_{2FSK} \approx |f_2 - f_1| + 2R_B$）。在码元速率 $R_B$ 一定时，<strong>2FSK 占用的频带最宽，频带利用率最低，有效性最差</strong>。</li>
+</ul>
+<h3 id="3-设备复杂度">3. 设备复杂度</h3>
+<ul>
+<li>非相干解调方式（包络检波、差分相干解调）不需要从接收信号中提取复杂的同频同相相干载波，因而<strong>设备最为简单、成本较低</strong>。</li>
+<li>相干解调需要配备高精度的载波提取电路，设备相对复杂。</li>
+</ul>
+<hr>
+<h2 id="7-5-多进制数字调制系统（M-进制调制）">7.5 多进制数字调制系统（M 进制调制）</h2>
+<h3 id="1-核心引入背景">1. 核心引入背景</h3>
+<p>二进制调制每个码元只能携带 $1 \text{ bit}$ 信息: 1759]。而 $M$ 进制（多进制）调制的一个码元可以携带 $\log_2 M$ 比特的信息，在相同的码元速率下可以大幅提高系统的<strong>信息传输速率（传信率）<strong>和</strong>频带利用率</strong>。</p>
+<h3 id="2-MASK（多进制振幅键控）">2. MASK（多进制振幅键控）</h3>
+<ul>
+<li>载波的振幅有 $M$ 种不同的取值（例如 4ASK 信号振幅有 4 种取值，每个码元含 $2 \text{ bit}$）。</li>
+<li><strong>调制与解调</strong>：输入的二进制基带信号需先经过电平变换器转换为 $M$ 电平的多进制基带脉冲，再去控制调制器。解调也分为相干和非相干解调两种。它的频带带宽与 MPSK 相同。</li>
+</ul>
+<h3 id="3-MFSK（多进制频移键控）">3. MFSK（多进制频移键控）</h3>
+<ul>
+<li>采用 $M$ 种不同的频率分别表示不同的多比特双码元信息（如 4FSK）。</li>
+<li><strong>特点与应用</strong>：为防止频谱混叠，要求各载频之间的距离足够大，以便接收端能够用各路带通滤波器精确分离出不同频率的谱。MFSK 信号占用非常宽的频带，信道频带利用率低，通常只<strong>用于调制速率不高、抗衰落要求高的衰落信道传输场合</strong>。</li>
+<li><strong>系统带宽</strong>：$B = f_M - f_1 + \Delta f$（$f_1$ 为最低载频，$f_M$ 为最高载频，$\Delta f$ 为单个码元带宽）。</li>
+</ul>
+<h3 id="4-MPSK（多进制相移键控）">4. MPSK（多进制相移键控）</h3>
+<ul>
+<li>利用载波的 $M$ 种不同均匀间隔的初始相位来表示数字多比特信息。通常 $M$ 取 2 的正整数幂：$M = 2^k$。</li>
+<li><strong>解调特点</strong>：由于相位状态多，在接收端不能使用简单的单个本地相干载波解调，否则会因为余弦函数的对称性产生解调模糊；必须<strong>采用两路正交的相干载波进行相干解调</strong>。MPSK 信号可以看作是由正弦和余弦两路正交平衡分量合成的信号，其信号带宽与 MASK 完全相同。</li>
+</ul>
+<h3 id="5-QPSK（4PSK-正交相移键控）">5. QPSK（4PSK / 正交相移键控）</h3>
+<ul>
+<li>4PSK 常称为正交相移键控。其每一种载波相位代表两个比特的组合，称为<strong>双比特码元</strong>（记为 $ab$，如 <code>00</code>、<code>01</code>、<code>10</code>、<code>11</code>）。双比特信息和相位 $\theta_k$ 之间的关系通常按**格雷码（Gray 码）**规律安排，以最小化误码对多比特带来的影响: 1893, 1895]。</li>
+<li><strong>波形与相位连续性</strong>：只有当每个码元中包含整数个载波周期时，初始相位相同的相邻码元的波形和瞬时相位才是连续的；否则，波形或瞬时相位可能出现断裂不连续。</li>
+<li><strong>调制与解调</strong>：调制有相位选择法（直接选相输出）和正交调相法。解调时，利用两路正交的相干载波（$\cos \omega_0 t$ 和 $-\sin \omega_0 t$）独立相乘分离出两路并行的二进制码元 $a$ 和 $b$，再经过并/串变换恢复成串行码流输出。</li>
+</ul>
+<h3 id="6-MDPSK（多进制差分相移键控）">6. MDPSK（多进制差分相移键控）</h3>
+<ul>
+<li>与 MPSK 类似，为了克服多进制相移键控相干解调中由于本地载波提取带来的相位模糊问题，引入相对相移概念。它将 MPSK 信号用的绝对参考相位，替换为<strong>相对于前一码元相位的相对相移</strong>。</li>
+<li>4 进制的差分相移键控系统通常记为 <strong>QDPSK</strong>。</li>
+</ul>
+<h1>第十章 信源编码</h1>
+<h2 id="10-1-信源编码概述与引言">10.1 信源编码概述与引言</h2>
+<h3 id="1-信源编码的基本特征">1. 信源编码的基本特征</h3>
+<ul>
+<li><strong>信源编码</strong>：指将信源发出的信号（模拟或数字信号）转换为适合数字通信系统传输的数字代码（码组）的过程。</li>
+<li><strong>数字带通传输系统中的模数转换</strong>：对模拟信号进行信源编码是实现模拟信号数字化的关键步骤。</li>
+</ul>
+<h3 id="2-信源编码的主要作用与目的">2. 信源编码的主要作用与目的</h3>
+<ul>
+<li><strong>提高有效性（数据压缩）</strong>：设法减少信源输出的码元数目或降低码元速率，去掉信源中的信息冗余（冗余度压缩）。</li>
+<li><strong>模数转换（A/D 转换）</strong>：将连续的模拟信号转换为离散的数字脉冲信号，使模拟信号能够在数字通信系统中进行传输、处理和存储。</li>
+</ul>
+<hr>
+<h2 id="10-2-模拟信号的抽样（Sampling）">10.2 模拟信号的抽样（Sampling）</h2>
+<p>抽样是实现模拟信号数字化的第一步，它将时间连续的模拟信号变成时间离散的脉冲序列。</p>
+<h3 id="1-低通抽样定理">1. 低通抽样定理</h3>
+<ul>
+<li><strong>适用条件</strong>：信号最高频率受限于 $f_m$ 的低通型模拟信号 $m(t)$。</li>
+<li><strong>定理内容</strong>：为了能够无失真地从抽样信号中恢复出原模拟信号，抽样频率 $f_s$ 必须满足：</li>
+</ul>
+<p>$$f_s \ge 2f_m$$</p>
+<ul>
+<li><strong>奈奎斯特抽样间隔</strong>：$T_s = \frac{1}{f_s} \le \frac{1}{2f_m}$，其中最低抽样速率 $f_s = 2f_m$ 称为奈奎斯特抽样率。</li>
+<li><strong>混叠失真</strong>：若 $f_s &lt; 2f_m$，抽样信号的频谱将在频域发生交叠，导致接收端无法无失真地恢复原信号。</li>
+</ul>
+<h3 id="2-带通抽样定理">2. 带通抽样定理</h3>
+<ul>
+<li><strong>适用条件</strong>：对于频带限制在 $f_L$ 到 $f_H$ 之间的带通型模拟信号，其带宽为 $B = f_H - f_L$。</li>
+<li><strong>定理内容</strong>：其最低抽样频率 $f_s$ 不需要满足 $2f_H$，而可以降低为：</li>
+</ul>
+<p>$$f_s = 2B \left(1 + \frac{k}{N}\right)$$</p>
+<ul>
+<li>其中 $N = \lfloor \frac{f_H}{B} \rfloor$ 表示 $f_H$ 包含带宽 $B$ 的整数倍，$k$ 为其小数部分（$0 \le k &lt; 1$）。</li>
+<li>在通常工程上，简化且常用的最低带通抽样率公式常表示为：</li>
+</ul>
+<p>$$f_s = \frac{2f_H}{m}$$</p>
+<ul>
+<li>（其中 $m$ 是满足 $f_s \ge 2B$ 的最大正整数）。通过降低抽样频率，可以大幅减轻后续处理与传输的带宽压力。</li>
+</ul>
+<hr>
+<h2 id="10-3-模拟信号的量化（Quantization）">10.3 模拟信号的量化（Quantization）</h2>
+<p>量化是将时间离散、幅度连续的抽样信号变成时间离散、幅度离散的数字信号的过程。量化必然会带来误差，称为<strong>量化噪声</strong>。</p>
+<h3 id="1-均匀量化">1. 均匀量化</h3>
+<ul>
+<li><strong>基本特征</strong>：量化区间的动态范围内，每一个量化级的间隔（量化步长 $\Delta$）都是完全相等的。</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>当输入信号幅度较小时，量化噪声的均方值不变，导致<strong>小信号的信号量化噪声比（$S/N_q$）非常低</strong>。</li>
+<li>难以适应动态范围较大的输入语音或音频信号。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-非均匀量化（A律与-mu-律）">2. 非均匀量化（A律与 $\mu$律）</h3>
+<ul>
+<li><strong>基本特征</strong>：量化步长不固定。信号幅度小时，量化步长小（量化细致）；信号幅度大时，量化步长高（量化粗糙）。</li>
+<li><strong>实现思路</strong>：通常通过**瞬时压缩扩张技术（压扩技术）**实现。即在发送端使用压缩器对小信号进行放大、对大信号进行压缩，然后进行均匀量化；在接收端使用相反特性的扩张器恢复原信号。</li>
+<li><strong>两大主流压扩标准</strong>：
+<ul>
+<li><strong>A 律（A-law）</strong>：主要应用于中国、欧洲和国际通信干线。</li>
+<li><strong>$\mu$ 律（$\mu$-law）</strong>：主要应用于北美、日本和部分台湾地区。</li>
+</ul>
+</li>
+<li><strong>A 律 13 折线近似法</strong>：由于对数曲线在电路上难以精确实现，工程上通常使用 13 条不同斜率的直线段来近似逼近 A 律压缩特性曲线。
+<ul>
+<li>正负双极性信号各对应 8 个段落，但因为正负轴最靠近原点的两段斜率相同且连成一条直线，故正负轴共计有 $8 \times 2 - 3 = 13$ 条折线段。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="10-4-脉冲编码调制（PCM）">10.4 脉冲编码调制（PCM）</h2>
+<h3 id="1-PCM-编码基本原理">1. PCM 编码基本原理</h3>
+<p>脉冲编码调制（Pulse Code Modulation, PCM）是现代数字电话通信的基础。它由<strong>抽样、量化、编码</strong>三个核心步骤组成，从而将连续的语音信号转化为一串二进制数字序列。</p>
+<h3 id="2-A-律-13-折线-8-位码编码规则">2. A 律 13 折线 8 位码编码规则</h3>
+<p>在 PCM 体制中，通常采用 8 位二进制码 ($7 \text{位码加上极性码}$) 来表示一个抽样量化值。这 8 位二进制码的结构安排如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">码位</th>
+<th style="text-align:center">作用</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>$D_1$</strong></td>
+<td style="text-align:center"><strong>极性码</strong></td>
+<td style="text-align:left">表示抽样值的正负极性：<code>1</code> 表示正电平，<code>0</code> 表示负电平。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>$D_2 D_3 D_4$</strong></td>
+<td style="text-align:center"><strong>段落码</strong></td>
+<td style="text-align:left">3 位二进制码共有 8 种组合，分别对应 A 律 13 折线在正（或负）半轴内的 8 个段落（第 1 段至第 8 段）。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>$D_5 D_6 D_7 D_8$</strong></td>
+<td style="text-align:center"><strong>段内码</strong></td>
+<td style="text-align:left">4 位二进制码共有 16 种组合，将选定的那一个段落进行 16 等分（即段内进行均匀量化），代表具体的量化级编号。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-逐次比较型编码器工作原理">3. 逐次比较型编码器工作原理</h3>
+<ul>
+<li>编码器通过“秤重”式的逐次比较反馈网络，将输入抽样保持电压与内部产生的基准电压（各段落及段内量化级所对应的分层电平）进行 8 次级联比较，从而逐位确定 $D_1$ 至 $D_8$ 的取值。</li>
+</ul>
+<hr>
+<h2 id="10-5-差分脉冲编码调制（DPCM）与增量调制（-Delta-M-）">10.5 差分脉冲编码调制（DPCM）与增量调制（$\Delta M$）</h2>
+<h3 id="1-DPCM（差分脉冲编码调制）">1. DPCM（差分脉冲编码调制）</h3>
+<ul>
+<li><strong>核心思想</strong>：利用语音等信号具有较强的前后相关性特征。DPCM 并不直接对当前抽样值进行编码，而是<strong>对当前抽样值与前一个预测值之间的差值（预测误差）进行编码传输</strong>。这样能够显著降低传输的传码率或提高量化信噪比。</li>
+</ul>
+<h3 id="2-Delta-M-（增量调制-DM）">2. $\Delta M$（增量调制 / DM）</h3>
+<ul>
+<li><strong>基本原理</strong>：$\Delta M$ 是 DPCM 的一种极端特例。它只使用 <strong>1 位二进制码</strong>（<code>1</code> 或 <code>0</code>）来表示相邻抽样时刻信号增量的正负方向。
+<ul>
+<li>如果当前抽样值大于前一个阶梯波形值，输出码元为 <code>1</code>（代表阶梯波上升一个固定步长 $\sigma$）。</li>
+<li>如果当前抽样值小于前一个阶梯波形值，输出码元为 <code>0</code>（代表阶梯波下降一个固定步长 $\sigma$）。</li>
+</ul>
+</li>
+<li><strong>优点</strong>：结构极其简单、不需要复杂的 A/D 转换和 8 位码字分配、抗信道误码能力强。</li>
+</ul>
+<h3 id="3-增量调制系统中的两大类噪声">3. 增量调制系统中的两大类噪声</h3>
+<ul>
+<li><strong>（1）过载量化噪声（斜率过载噪声）</strong>：
+<ul>
+<li><strong>成因</strong>：当模拟信号的变动率（斜率）过快，导致增量调制的固定步长 $\sigma$ 乘以抽样频率 $f_s$ 的乘积（最大跟踪斜率）赶不上输入信号的变化率时产生。</li>
+<li><strong>解决途径</strong>：提高抽样频率 $f_s$ 或增大固定步长 $\sigma$（或采用自适应增量调制 ADM 动态调整步长）。</li>
+</ul>
+</li>
+<li><strong>（2）一般量化噪声（颗粒噪声）</strong>：
+<ul>
+<li><strong>成因</strong>：当模拟信号平稳或无信号输入时，由于固定的增量步长 $\sigma$ 相对太大，量化器输出将交替呈现 <code>0</code> 和 <code>1</code> 循环跳变，使译码波形在信号上下做锯齿状交替起伏，给人以粗糙的噪声感。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="10-6-时分复用（TDM）与多路数字电话系统">10.6 时分复用（TDM）与多路数字电话系统</h2>
+<h3 id="1-时分复用（TDM）基本原理">1. 时分复用（TDM）基本原理</h3>
+<ul>
+<li>时分复用是利用各路信号在<strong>时间轴上互不重叠的时隙</strong>来实现多路信号复用传输的技术。与频分复用（FDM）相比，TDM 在频域上各路信号是重叠混杂的，但在时域上各路信号是完全分离、独立清析的。</li>
+</ul>
+<h3 id="2-PCM-30-32-路数字电话系统（E1-基群帧结构）">2. PCM 30/32 路数字电话系统（E1 基群帧结构）</h3>
+<p>我国广泛采用的欧洲 E1 标准是时分复用的典型范例，其核心参数和帧结构如下：</p>
+<ul>
+<li><strong>核心基本参数</strong>：
+<ul>
+<li>话音信号最高频率：$3400\text{ Hz}$。</li>
+<li>抽样频率：$f_s = 8000\text{ Hz}$。</li>
+<li>抽样周期（一帧的长度）：$T_s = \frac{1}{8000} = 125\ \mu\text{s}$。</li>
+<li>每路样值采用 PCM A 律 8 位二进制码进行编码。</li>
+</ul>
+</li>
+<li><strong>帧结构划分</strong>：
+<ul>
+<li>每一帧时间为 $125\ \mu\text{s}$，内部等分成 32 个时间间隙（路时隙），分别记为 <strong>$TS_0$ 至 $TS_{31}$</strong>。</li>
+<li><strong>$TS_0$ 时隙</strong>：用于传输帧同步信号和辅助状态码。</li>
+<li><strong>$TS_{16}$ 时隙</strong>：用于传输多路话音信号的控制信令（信令时隙）。</li>
+<li>其余 30 个时隙（$TS_1 \sim TS_{15}$ 和 $TS_{17} \sim TS_{31}$）用于传输 <strong>30 路独立的话音业务信号</strong>。</li>
+</ul>
+</li>
+<li><strong>基群数码率（传码率）计算</strong>：
+<ul>
+<li>一帧内包含的总比特数：$32\text{ (路)} \times 8\text{ (位)} = 256\text{ bit}$。</li>
+<li>基群数码率 $R_B$ 为：</li>
+</ul>
+</li>
+</ul>
+<p>$$R_B = 32 \times 8 \times 8000 = 2048\text{ kbit/s} = 2.048\text{ Mbit/s}$$</p>
+<ul>
+<li><strong>复帧结构</strong>：由于信令频率较低，不需要每帧都发送一次。因此 E1 系统规定由 16 个连续的子帧（$F_0 \sim F_{15}$）构成一个<strong>复帧</strong>（复帧周期为 $125\ \mu\text{s} \times 16 = 2\text{ ms}$）。其中 $F_0$ 子帧的 $TS_{16}$ 传输复帧同步码，其余 15 个子帧的 $TS_{16}$ 每帧负责轮流传送 2 路话音的信令，15 帧刚好完成全部 30 路话音的信令传递。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/04/20/%E8%A3%85%E5%A5%BDDebian13%E5%90%8E,%20%E4%BD%A0%E5%8F%AF%E8%83%BD(%E4%B8%80%E5%AE%9A)%E9%9C%80%E8%A6%81%E7%94%A8%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4/" rel="prev" title="装好Debian13后, 你可能(一定)需要用到的一些命令">
+                  <i class="fa fa-angle-left"></i> 装好Debian13后, 你可能(一定)需要用到的一些命令
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Untitled572</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><div class="run-time">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+  <script>
+      var now = new Date();
+      function createtime() {
+          var grt= new Date("2026/04/01 12:00:00"); 
+          now.setTime(now.getTime()+250);
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+          document.getElementById("timeDate").innerHTML = "本站已稳定运行 "+dnum+" 天 ";
+          document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+      }
+      setInterval("createtime()",250);
+  </script>
+</div>
+
+<div class="private-links" style="margin-top: 8px;">
+  <a href="https://ut572.eu.org" target="_blank" style="color: inherit; opacity: 0.7; font-size: 13px; border-bottom: none; text-shadow: 0 0 2px rgba(0,0,0,0.8);">
+    <i class="fa fa-server"></i> Console
+  </a>
+  
+  <span style="margin: 0 8px; opacity: 0.5; color: #fff; text-shadow: 0 0 2px rgba(0,0,0,0.8);">|</span>
+  
+  <a href="https://pan.ut572.eu.org/" target="_blank" style="color: inherit; opacity: 0.7; font-size: 13px; border-bottom: none; text-shadow: 0 0 2px rgba(0,0,0,0.8);">
+    <i class="fa fa-cloud"></i> Pan
+  </a>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"Untitled572/Untitled572.github.io","issue_term":"pathname","theme":"preferred-color-scheme","label":"Comment"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+
+</body>
+</html>
